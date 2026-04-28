@@ -6,10 +6,11 @@ import Hero from "./sections/Hero";
 export default function Home() {
   return (
     <div className="">
-      <NavBar />
-      <main className="">
+      <div className="hero">
+        <NavBar />
         <Hero />
-      </main>
+      </div>
+      <main className=""></main>
     </div>
   );
 }
