@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Inter, Rochester } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
 });
 
 const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const rochester = Rochester({
+  variable: "--font-rochester",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -23,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.className} ${inter.className}} h-full antialiased`}
+      className={`${playfair.variable} ${inter.variable} ${rochester.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
