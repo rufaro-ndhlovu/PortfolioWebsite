@@ -20,7 +20,9 @@ export default function NavBar() {
         <Link href="/">Contact</Link>
       </div>
       <div className="px-2">
-        <Button onClick={handleClick}>Lets Work Together</Button>
+        <Button color="dark-pill" onClick={handleClick}>
+          Lets Work Together
+        </Button>
       </div>
     </nav>
   );
