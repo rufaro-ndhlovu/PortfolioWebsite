@@ -6,7 +6,7 @@ import Hero from "./sections/Hero";
 export default function Home() {
   return (
     <div className="">
-      <div className="hero">
+      <div className="bgGradient">
         <NavBar />
         <Hero />
       </div>

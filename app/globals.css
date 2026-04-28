@@ -52,7 +52,7 @@
   --gradient-primary: var(--gradent-primary);
 }
 
-.hero {
+.bgGradient {
   background:
     radial-gradient(
       circle at 70% 40%,
@@ -65,4 +65,12 @@
       transparent 60%
     ),
     linear-gradient(180deg, #fff1f5 0%, #ffe4ec 100%);
+}
+
+.image {
+  background: radial-gradient(
+    circle,
+    rgba(244, 114, 182, 0.35),
+    transparent 70%
+  );
 }
