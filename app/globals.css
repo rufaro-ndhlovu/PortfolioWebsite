@@ -9,10 +9,14 @@
   --bg-dark: #0b0f1a; /* deep navy for sections */
   --bg-card: #121826;
 
+  --button-dark: #251e20;
+
   --pink-100: #fce7f3;
   --pink-300: #f9a8d4;
-  --pink-400: #f472b6;
-  --pink-500: #ec4899;
+  --pink-logo: #e98395;
+  --pink-name: #ef9ca6;
+  --pink-strong: #e3708a;
+  --rose-accent: #fb7185;
   --pink-700: #be185d; /* accessible text pink */
 
   --purple-400: #a78bfa;
@@ -23,6 +27,7 @@
   --text-primary: #1f2937; /* on light */
   --text-light: #f8fafc; /* on dark */
   --text-muted: #94a3b8;
+  --text-brown: #53413f;
 
   --gradient-primary: linear-gradient(135deg, #f472b6, #fb7185);
   --gradient-hover: linear-gradient(135deg, #ec4899, #f43f5e);
@@ -31,6 +36,11 @@
     rgba(244, 114, 182, 0.2),
     rgba(139, 92, 246, 0.2)
   );
+
+  --glass-light: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.4);
+
+  --dark-pill: #251d21;
 }
 
 @theme inline {
@@ -39,8 +49,9 @@
   --font-playfair: var(--font-playfair);
   --font-inter: var(--font-inter);
   --font-logo: var(--font-rochester);
+  --gradient-primary: var(--gradent-primary);
 }
 
 body {
-  background: var(--background);
+  background: var(--gradient-soft);
 }
