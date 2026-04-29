@@ -32,7 +32,7 @@
   --text-dark: #fdf0f5; /* on dark sections */
   --text-muted: #c4a0b0; /* secondary on dark */
 
-  --bg-hero-img: url("/herobg.png");
+  --bg-hero-img: url("/herobg.png") center / cover no-repeat;
 }
 
 @theme inline {

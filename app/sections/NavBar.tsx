@@ -10,16 +10,16 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="w-full mt-0 flex flex-row justify-between items-center bg-[var(--bg-hero)] px-10 py-4 lg:px-20">
+    <nav className="w-full mt-0 flex flex-row justify-between items-center sm:px-5 py-3 lg:px-20 bg-transparent">
       <Logo />
-      <div className="md:flex gap-6 sm: hidden">
+      <div className="md:flex gap-6 sm:hidden">
         <Link href="/">About</Link>
         <Link href="/">Skills</Link>
         <Link href="/">Projects</Link>
         <Link href="/">Beyond Code</Link>
         <Link href="/">Contact</Link>
       </div>
-      <div className="px-2">
+      <div>
         <Button color="bg-card" textColor="text-dark" onClick={handleClick}>
           Lets Work Together
         </Button>
