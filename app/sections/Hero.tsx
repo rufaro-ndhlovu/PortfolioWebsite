@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-import GradientText from "../ui/GradientText";
-import GradientButton from "../ui/GradientButton";
 import Image from "next/image";
 import Button from "../ui/Button";
 import NavBar from "./NavBar";
+import { Astroid } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -13,13 +12,16 @@ export default function Hero() {
       <NavBar />
       <div className="relative w-full min-h-screen flex items-center justify-between px-10 lg:px-20 overflow-hidden">
         {/* BACKGROUND GLOW */}
-        <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] lg:w-[900px] lg:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full"></div>
+        <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] md:w-[900px] md::h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full"></div>
 
         {/* LEFT SIDE */}
         <div className="max-w-xl z-10">
-          <p className="text-[var(--pink-soft)] tracking-widest text-sm mb-4 font-bold">
-            HI, I'M
-          </p>
+          <div className="flex flex-row gap-2 items-center">
+            <Astroid size={16} color="#e8869a" strokeWidth={3} />
+            <p className="text-[var(--pink-soft)] tracking-widest text-smfont-bold">
+              HI, I'M
+            </p>
+          </div>
 
           <h1 className="text-6xl lg:text-8xl leading-tight font-serif">
             <span
@@ -78,8 +80,8 @@ export default function Hero() {
           <Image
             src="/HeroCardImg.png"
             alt="Hero card"
-            width={300}
-            height={300}
+            width={250}
+            height={250}
             className="absolute bottom-10 right-[-40px] z-20"
           />
 
