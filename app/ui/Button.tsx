@@ -4,13 +4,17 @@ type props = {
   children: React.ReactNode;
   onClick: () => void;
   color: string;
+  textColor?: string;
 };
 
-export default function Button({ children, onClick, color }: props) {
+export default function Button({ children, onClick, color, textColor }: props) {
   return (
     <button
-      className="p-2 rounded-full text-[var(--pink-logo)] font-bold"
-      style={{ backgroundColor: `var(--${color})` }}
+      className="py-2 px-3 rounded-full font-bold"
+      style={{
+        backgroundColor: `var(--${color})`,
+        color: `var(--${textColor})`,
+      }}
       onClick={onClick}
     >
       {children}

@@ -10,7 +10,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="w-full mt-0 flex flex-row justify-between items-center">
+    <nav className="w-full mt-0 flex flex-row justify-between items-center bg-[var(--bg-hero)] px-10 py-4 lg:px-20">
       <Logo />
       <div className="md:flex gap-6 sm: hidden">
         <Link href="/">About</Link>
@@ -20,7 +20,7 @@ export default function NavBar() {
         <Link href="/">Contact</Link>
       </div>
       <div className="px-2">
-        <Button color="dark-pill" onClick={handleClick}>
+        <Button color="bg-card" textColor="text-dark" onClick={handleClick}>
           Lets Work Together
         </Button>
       </div>

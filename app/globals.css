@@ -1,46 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0f1a;
-  --foreground: #f8fafc;
-
-  --bg-light: #fff1f5; /* soft blush */
-  --bg-soft: #ffe4ec;
-  --bg-dark: #0b0f1a; /* deep navy for sections */
-  --bg-card: #121826;
-
-  --button-dark: #251e20;
-
-  --pink-100: #fce7f3;
-  --pink-300: #f9a8d4;
-  --pink-logo: #e98395;
-  --pink-name: #ef9ca6;
-  --pink-strong: #e3708a;
-  --rose-accent: #fb7185;
-  --pink-700: #be185d; /* accessible text pink */
-
-  --purple-400: #a78bfa;
-  --purple-500: #8b5cf6;
-
-  --teal-400: #22d3ee;
-
-  --text-primary: #1f2937; /* on light */
-  --text-light: #f8fafc; /* on dark */
-  --text-muted: #94a3b8;
-  --text-brown: #53413f;
+  --gradient-soft: linear-gradient(135deg, #ffd6e5 0%, #f47ca8 100%);
+  --gradient-dark: linear-gradient(180deg, #0f0a0f 0%, #1a121a 100%);
 
   --gradient-primary: linear-gradient(135deg, #f472b6, #fb7185);
   --gradient-hover: linear-gradient(135deg, #ec4899, #f43f5e);
-  --gradient-soft: linear-gradient(
-    135deg,
-    rgba(244, 114, 182, 0.2),
-    rgba(139, 92, 246, 0.2)
-  );
 
-  --glass-light: rgba(255, 255, 255, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.4);
+  --success: #4ade80;
 
-  --dark-pill: #251d21;
+  /* Hero / light sections */
+  --bg-hero-light: #fdf0f5; /* warm blush white */
+  --bg-hero-mid: #fce4ee; /* mid blush */
+  --bg-hero-deep: #f9d0e5; /* deeper edge */
+  --circle-pink: #f4b8ce; /* large circle behind photo */
+
+  /* Dark sections (warm brown, no purple) */
+  --bg-dark: #1e1218; /* darkest — footer/nav */
+  --bg-section: #2a1a22; /* about/skills section */
+  --bg-card: #3a2030; /* card backgrounds */
+
+  /* Pink accents */
+  --pink-main: #c9607a; /* buttons, headings */
+  --pink-soft: #e8869a; /* eyebrows, labels */
+  --pink-light: #f4b8ce; /* circle, light fills */
+  --pink-glow: rgba(201, 96, 122, 0.25);
+
+  /* Text */
+  --text-hero: #2a1a22; /* on light hero */
+  --text-body: #4a2e38; /* paragraphs on light */
+  --text-dark: #fdf0f5; /* on dark sections */
+  --text-muted: #c4a0b0; /* secondary on dark */
+
+  --bg-hero-img: url("/herobg.png");
 }
 
 @theme inline {
@@ -50,27 +42,4 @@
   --font-inter: var(--font-inter);
   --font-logo: var(--font-rochester);
   --gradient-primary: var(--gradent-primary);
-}
-
-.bgGradient {
-  background:
-    radial-gradient(
-      circle at 70% 40%,
-      rgba(244, 114, 182, 0.25),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(236, 72, 153, 0.15),
-      transparent 60%
-    ),
-    linear-gradient(180deg, #fff1f5 0%, #ffe4ec 100%);
-}
-
-.image {
-  background: radial-gradient(
-    circle,
-    rgba(244, 114, 182, 0.35),
-    transparent 70%
-  );
 }
