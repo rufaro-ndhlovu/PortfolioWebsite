@@ -11,12 +11,12 @@ export default function Hero() {
   return (
     <section className="relative" style={{ background: "var(--bg-hero-img)" }}>
       <NavBar />
-      <div className="relative w-full min-h-screen flex items-center justify-between px-10 lg:px-20 overflow-hidden">
+      <div className="relative w-full min-h-screen flex items-center justify-between sm:px-4 md:px-4 lg:px-20 overflow-hidden sm:flex-col md:flex-row">
         {/* BACKGROUND GLOW */}
-        <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] md:w-[900px] md::h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full"></div>
+        <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full"></div>
 
         {/* LEFT SIDE */}
-        <div className="max-w-xl z-10">
+        <div className="max-w-xl z-10 sm:mt-8">
           <div className="flex flex-row gap-2 items-center">
             <Astroid size={16} color="#e8869a" strokeWidth={3} />
             <p className="text-[var(--pink-soft)] tracking-widest text-sm font-bold">
@@ -67,7 +67,7 @@ export default function Hero() {
           ></div>
 
           {/* Image */}
-          <div className="relative">
+          <div className="relative sm:mt-6">
             <Image
               src="/Rufaro.png"
               alt="Rufaro Ndhlovu"
@@ -93,7 +93,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div>
+        <div className="sm:mt-8">
           <HeroLinks />
         </div>
       </div>
