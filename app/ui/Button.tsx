@@ -11,7 +11,7 @@ type props = {
 export default function Button({ children, onClick, color, textColor }: props) {
   return (
     <button
-      className="py-2 px-3 rounded-full font-bold flex flex-row gap-2 items-center"
+      className="py-3 px-3 rounded-full font-bold flex flex-row gap-2 items-center"
       style={{
         backgroundColor: `var(--${color})`,
         color: `var(--${textColor})`,

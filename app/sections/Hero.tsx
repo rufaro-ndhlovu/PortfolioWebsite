@@ -5,6 +5,7 @@ import Image from "next/image";
 import Button from "../ui/Button";
 import NavBar from "./NavBar";
 import { Astroid } from "lucide-react";
+import HeroLinks from "../ui/Herolinks";
 
 export default function Hero() {
   return (
@@ -18,7 +19,7 @@ export default function Hero() {
         <div className="max-w-xl z-10">
           <div className="flex flex-row gap-2 items-center">
             <Astroid size={16} color="#e8869a" strokeWidth={3} />
-            <p className="text-[var(--pink-soft)] tracking-widest text-smfont-bold">
+            <p className="text-[var(--pink-soft)] tracking-widest text-sm font-bold">
               HI, I'M
             </p>
           </div>
@@ -80,8 +81,8 @@ export default function Hero() {
           <Image
             src="/HeroCardImg.png"
             alt="Hero card"
-            width={250}
-            height={250}
+            width={300}
+            height={300}
             className="absolute bottom-10 right-[-40px] z-20"
           />
 
@@ -90,6 +91,10 @@ export default function Hero() {
             <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>
             Available for opportunities
           </div>
+        </div>
+
+        <div>
+          <HeroLinks />
         </div>
       </div>
     </section>
