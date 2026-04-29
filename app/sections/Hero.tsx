@@ -9,7 +9,10 @@ import HeroLinks from "../ui/Herolinks";
 
 export default function Hero() {
   return (
-    <section className="relative" style={{ background: "var(--bg-hero-img)" }}>
+    <section
+      className="relative pb-4"
+      style={{ background: "var(--bg-hero-img)" }}
+    >
       <NavBar />
       <div className="relative w-full min-h-screen flex items-center justify-between sm:px-4 md:px-4 lg:px-20 overflow-hidden sm:flex-col md:flex-row">
         {/* BACKGROUND GLOW */}
