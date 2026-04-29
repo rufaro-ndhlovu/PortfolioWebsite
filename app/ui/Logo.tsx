@@ -2,14 +2,14 @@ import React from "react";
 
 export default function Logo() {
   return (
-    <div className="p-4">
+    <div className="p-2">
       <h1
-        className="text-4xl text-[var(--pink-logo)]"
+        className="text-4xl text-[var(--pink-main)] font-bold"
         style={{
-          fontFamily: "var(--font-rochester)",
+          fontFamily: "var(--font-petitFormalScript)",
         }}
       >
-        RN.
+        rn.
       </h1>
     </div>
   );
