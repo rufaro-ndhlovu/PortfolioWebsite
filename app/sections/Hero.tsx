@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Button from "../ui/Button";
 import NavBar from "./NavBar";
-import { Astroid } from "lucide-react";
+import Label from "../ui/Label";
 import HeroLinks from "../ui/Herolinks";
 
 export default function Hero() {
@@ -17,12 +17,7 @@ export default function Hero() {
 
         {/* LEFT SIDE */}
         <div className="max-w-xl z-10 sm:mt-9 md:mt-0">
-          <div className="flex flex-row gap-2 items-center">
-            <Astroid size={16} color="#e8869a" strokeWidth={3} />
-            <p className="text-[var(--pink-soft)] tracking-widest text-sm font-bold">
-              HI, I'M
-            </p>
-          </div>
+          <Label>HI, I'M</Label>
 
           <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex sm:flex-row md:flex-col sm:gap-4 md:gap-0">
             <span
