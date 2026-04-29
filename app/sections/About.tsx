@@ -9,11 +9,23 @@ export default function About() {
     <section className="bg-[var(--bg-section)] px-5 sm:py-5 md:py-10 text-[var(--text-dark)]">
       <Label>ABOUT ME</Label>
       <div>
-        <h2 className="text-3xl mb-4 mt-4 font-bold">
-          Developer. Problem solver.{" "}
-          <span className="italic">Lifelong learner.</span>
+        <h2
+          className="text-2xl mb-4 mt-4 font-semibold"
+          style={{
+            fontFamily: "var(--font-playfair)",
+          }}
+        >
+          Developer. Problem solver. <br />
+          <span
+            className="italic"
+            style={{
+              fontFamily: "var(--font-petitFormalScript)",
+            }}
+          >
+            Lifelong learner.
+          </span>
         </h2>
-        <p className="text-[var(--pink-light)]">
+        <p className="text-[var(--pink-light)] mb-4">
           I'm a Front-End Developer specialising in responsive, accessible,
           user-focused web applications. I translate complex requirements into
           functional, beautiful UIs with JS, TypeScript, React and Next.js.

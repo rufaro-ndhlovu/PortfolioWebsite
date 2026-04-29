@@ -43,3 +43,7 @@
   --font-logo: var(--font-rochester);
   --gradient-primary: var(--gradent-primary);
 }
+
+body {
+  font-family: var(--font-inter);
+}

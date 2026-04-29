@@ -29,7 +29,14 @@ export default function Hero() {
               Rufaro
             </span>
 
-            <span className="text-[var(--text-primary)]">Ndhlovu</span>
+            <span
+              className="text-[var(--text-primary)]"
+              style={{
+                fontFamily: "var(--font-playfair)",
+              }}
+            >
+              Ndhlovu
+            </span>
           </h1>
 
           <p className="mt-4 text-[var(--pink-main)] font-semibold tracking-wide">
