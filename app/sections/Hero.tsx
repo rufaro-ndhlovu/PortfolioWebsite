@@ -13,7 +13,7 @@ export default function Hero() {
       <NavBar />
       <div className="relative w-full min-h-screen flex items-center justify-between px-10 lg:px-20 overflow-hidden">
         {/* BACKGROUND GLOW */}
-        <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] lg:w-[900px] h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full"></div>
+        <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] lg:w-[900px] lg:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full"></div>
 
         {/* LEFT SIDE */}
         <div className="max-w-xl z-10">
@@ -56,7 +56,7 @@ export default function Hero() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="relative flex justify-center items-center">
+        <div className="relative w-full max-w-[500px] lg:max-w-[600px] aspect-square">
           {/* Glow circle behind image */}
           <div
             className="absolute w-[500px] h-[500px] bg-[var(--pink-main)] opacity-30 blur-[100px] rounded-full"
@@ -70,9 +70,18 @@ export default function Hero() {
               alt="Rufaro Ndhlovu"
               width={600}
               height={600}
-              className="rounded-2xl object-cover"
+              className="object-contain z-10"
             />
           </div>
+
+          {/* Hero Card Image */}
+          <Image
+            src="/HeroCardImg.png"
+            alt="Hero card"
+            width={300}
+            height={300}
+            className="absolute bottom-10 right-[-40px] z-20"
+          />
 
           {/* Availability badge */}
           <div className="absolute bottom-4 left-18 bg-[var(--bg-card)] border border-white/10 px-4 py-2 rounded-full text-sm text-white backdrop-blur-md">
