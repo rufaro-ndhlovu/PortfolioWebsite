@@ -48,7 +48,7 @@ export default function Hero() {
 
           <div className="flex gap-4 mt-8">
             {/* 2 buttons side by side */}
-            <Button color="pink-main" textColor="text-dark" onClick={() => {}}>
+            <Button color="pink-main" onClick={() => {}}>
               View My Work
             </Button>
 
@@ -80,7 +80,7 @@ export default function Hero() {
           {/* Hero Card Image */}
           <Image
             src="/HeroCardImg.png"
-            alt="Hero card"
+            alt="Hero image of a developer object"
             width={300}
             height={300}
             className="absolute bottom-10 right-[-40px] z-20"

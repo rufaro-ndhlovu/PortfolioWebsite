@@ -30,7 +30,7 @@ export default function NavBar() {
         </Link>
       </div>
       <div>
-        <Button color="bg-card" textColor="text-dark" onClick={handleClick}>
+        <Button color="bg-card" onClick={handleClick}>
           Lets Work Together
         </Button>
       </div>
