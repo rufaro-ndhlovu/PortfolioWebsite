@@ -5,7 +5,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function HeroLinks() {
   return (
-    <div className="flex flex-col gap-4 text-3xl">
+    <div className="flex md:flex-col sm:flex-row gap-4 text-3xl sm:right-0">
       <Link
         href="https://github.com/rufaro-ndhlovu"
         target="_blank"

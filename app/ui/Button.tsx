@@ -5,17 +5,14 @@ type props = {
   children: React.ReactNode;
   onClick: () => void;
   color: string;
-  textColor?: string;
 };
 
-export default function Button({ children, onClick, color, textColor }: props) {
+export default function Button({ children, onClick, color }: props) {
   return (
     <button
-      className="py-3 px-3 rounded-full font-bold flex flex-row gap-2 items-center"
-      style={{
-        backgroundColor: `var(--${color})`,
-        color: `var(--${textColor})`,
-      }}
+      className={`py-3 px-3 rounded-full font-bold flex gap-2 items-center 
+      bg-[var(--${color})] text-[var(--text-dark)] hover:text-[var(--text-hero)]
+      hover:bg-[var(--circle-pink)] transition`}
       onClick={onClick}
     >
       <Astroid size={16} color="#e8869a" strokeWidth={3} />

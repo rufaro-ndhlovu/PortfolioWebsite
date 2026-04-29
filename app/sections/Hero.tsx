@@ -4,37 +4,42 @@ import React from "react";
 import Image from "next/image";
 import Button from "../ui/Button";
 import NavBar from "./NavBar";
-import { Astroid } from "lucide-react";
+import Label from "../ui/Label";
 import HeroLinks from "../ui/Herolinks";
 
 export default function Hero() {
   return (
-    <section className="relative" style={{ background: "var(--bg-hero-img)" }}>
+    <section
+      className="relative pb-4"
+      style={{ background: "var(--bg-hero-img)" }}
+    >
       <NavBar />
-      <div className="relative w-full min-h-screen flex items-center justify-between px-10 lg:px-20 overflow-hidden">
+      <div className="relative w-full min-h-screen flex items-center justify-between sm:px-4 md:px-4 lg:px-20 overflow-hidden sm:flex-col md:flex-row">
         {/* BACKGROUND GLOW */}
-        <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] md:w-[900px] md::h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full"></div>
+        <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full"></div>
 
         {/* LEFT SIDE */}
-        <div className="max-w-xl z-10">
-          <div className="flex flex-row gap-2 items-center">
-            <Astroid size={16} color="#e8869a" strokeWidth={3} />
-            <p className="text-[var(--pink-soft)] tracking-widest text-sm font-bold">
-              HI, I'M
-            </p>
-          </div>
+        <div className="max-w-xl z-10 sm:mt-9 md:mt-0">
+          <Label>HI, I'M</Label>
 
-          <h1 className="text-6xl lg:text-8xl leading-tight font-serif">
+          <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex sm:flex-row md:flex-col sm:gap-4 md:gap-0">
             <span
-              className="italic text-[var(--pink-main)] font-bold"
+              className="text-[var(--pink-main)] font-bold"
               style={{
                 fontFamily: "var(--font-petitFormalScript)",
               }}
             >
               Rufaro
             </span>
-            <br />
-            <span className="text-[var(--text-primary)]">Ndhlovu</span>
+
+            <span
+              className="text-[var(--text-primary)]"
+              style={{
+                fontFamily: "var(--font-playfair)",
+              }}
+            >
+              Ndhlovu
+            </span>
           </h1>
 
           <p className="mt-4 text-[var(--pink-main)] font-semibold tracking-wide">
@@ -48,7 +53,7 @@ export default function Hero() {
 
           <div className="flex gap-4 mt-8">
             {/* 2 buttons side by side */}
-            <Button color="pink-main" textColor="text-dark" onClick={() => {}}>
+            <Button color="pink-main" onClick={() => {}}>
               View My Work
             </Button>
 
@@ -67,7 +72,7 @@ export default function Hero() {
           ></div>
 
           {/* Image */}
-          <div className="relative">
+          <div className="relative sm:mt-6">
             <Image
               src="/Rufaro.png"
               alt="Rufaro Ndhlovu"
@@ -80,7 +85,7 @@ export default function Hero() {
           {/* Hero Card Image */}
           <Image
             src="/HeroCardImg.png"
-            alt="Hero card"
+            alt="Hero image of a developer object"
             width={300}
             height={300}
             className="absolute bottom-10 right-[-40px] z-20"
@@ -93,7 +98,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div>
+        <div className="sm:mt-8">
           <HeroLinks />
         </div>
       </div>
