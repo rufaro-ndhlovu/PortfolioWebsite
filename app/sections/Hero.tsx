@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full"></div>
 
         {/* LEFT SIDE */}
-        <div className="max-w-xl z-10 sm:mt-8">
+        <div className="max-w-xl z-10 sm:mt-9 md:mt-0">
           <div className="flex flex-row gap-2 items-center">
             <Astroid size={16} color="#e8869a" strokeWidth={3} />
             <p className="text-[var(--pink-soft)] tracking-widest text-sm font-bold">
@@ -24,16 +24,16 @@ export default function Hero() {
             </p>
           </div>
 
-          <h1 className="text-6xl lg:text-8xl leading-tight font-serif">
+          <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex sm:flex-row md:flex-col sm:gap-4 md:gap-0">
             <span
-              className="italic text-[var(--pink-main)] font-bold"
+              className="text-[var(--pink-main)] font-bold"
               style={{
                 fontFamily: "var(--font-petitFormalScript)",
               }}
             >
               Rufaro
             </span>
-            <br />
+
             <span className="text-[var(--text-primary)]">Ndhlovu</span>
           </h1>
 
