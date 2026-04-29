@@ -18,14 +18,21 @@ export default function Hero() {
 
       {/* LEFT SIDE */}
       <div className="max-w-xl z-10">
-        <p className="text-[var(--pink-soft)] tracking-widest text-sm mb-4 bold">
+        <p className="text-[var(--pink-soft)] tracking-widest text-sm mb-4 font-bold">
           HI, I'M
         </p>
 
         <h1 className="text-6xl lg:text-8xl leading-tight font-serif">
-          <GradientText>Rufaro</GradientText>
+          <span
+            className="italic text-[var(--pink-main)] font-bold"
+            style={{
+              fontFamily: "var(--font-petitFormalScript)",
+            }}
+          >
+            Rufaro
+          </span>
           <br />
-          <span className="text-[var(--text-primary)] italic">Ndhlovu</span>
+          <span className="text-[var(--text-primary)]">Ndhlovu</span>
         </h1>
 
         <p className="mt-4 text-[var(--pink-main)] font-semibold tracking-wide">
@@ -62,9 +69,9 @@ export default function Hero() {
           <Image
             src="/Rufaro.png"
             alt="Rufaro Ndhlovu"
-            width={500}
-            height={500}
-            className="rounded-2xl object-cover md:w-"
+            width={600}
+            height={600}
+            className="rounded-2xl object-cover"
           />
         </div>
 

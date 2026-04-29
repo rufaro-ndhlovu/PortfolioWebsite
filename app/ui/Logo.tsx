@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Logo() {
   return (
-    <div className="p-3">
+    <div className="p-2">
       <h1
-        className="text-4xl text-[var(--pink-main)]"
+        className="text-4xl text-[var(--pink-main)] font-bold"
         style={{
-          fontFamily: "var(--font-rochester)",
+          fontFamily: "var(--font-petitFormalScript)",
         }}
       >
         rn.
