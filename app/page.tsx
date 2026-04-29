@@ -1,13 +1,14 @@
 "use client";
 
-import NavBar from "./sections/NavBar";
 import Hero from "./sections/Hero";
+import About from "./sections/About";
 
 export default function Home() {
   return (
     <div className="">
       <Hero />
-      <main className=""></main>
+
+      <About />
     </div>
   );
 }
