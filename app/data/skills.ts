@@ -26,7 +26,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Bootstrap" },
       { name: "jQuery" },
       { name: "Leaflet" },
-      { name: "tailwind.css" },
+      { name: "Tailwind.css" },
     ],
   },
 

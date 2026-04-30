@@ -9,11 +9,11 @@ export default function Skills() {
   return (
     <section className="p-6 bg-[var(--bg-dark)]">
       <Label>TECHNICAL SKILLS</Label>
-      <div className="mt-8 space-y-10 grid grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+      <div className="mt-8 space-y-10 grid grid-cols-2 lg:grid-cols-3 gap-6 items-stretch ">
         {skillCategories.map((category) => (
           <div
             key={category.title}
-            className="h-full border border-[var(--pink-glow)] rounded-lg p-4 bg-[var(--bg-section)]"
+            className="h-full border border-[var(--pink-glow)] rounded-4xl p-4 bg-[var(--bg-section)]"
           >
             <h3 className="text-sm uppercase tracking-[0.2em] text-[var(--pink-main)] mb-4">
               {category.title}
