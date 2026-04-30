@@ -9,10 +9,7 @@ import HeroLinks from "../ui/Herolinks";
 
 export default function Hero() {
   return (
-    <section
-      className="relative pb-4"
-      style={{ background: "var(--bg-hero-img)" }}
-    >
+    <section className="relative" style={{ background: "var(--bg-hero-img)" }}>
       <NavBar />
       <div className="relative w-full min-h-screen flex items-center justify-between px-4 lg:px-20 overflow-hidden flex-col md:flex-row mt-5 sm:mt-0">
         {/* BACKGROUND GLOW */}
@@ -64,42 +61,44 @@ export default function Hero() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="relative w-full max-w-[500px] lg:max-w-[600px] aspect-square">
-          {/* Glow circle behind image */}
-          <div
-            className="absolute w-[500px] h-[500px] bg-[var(--pink-main)] opacity-30 blur-[100px] rounded-full"
-            style={{ borderRadius: "50% 50% 48% 52% / 58% 58% 42% 42%" }}
-          ></div>
+        <div className="flex flex-col lg:flex-row items-center">
+          <div className="relative w-full max-w-[500px] lg:max-w-[600px] aspect-square">
+            {/* Glow circle behind image */}
+            <div
+              className="absolute w-[500px] h-[500px] bg-[var(--pink-main)] opacity-30 blur-[100px] rounded-full"
+              style={{ borderRadius: "50% 50% 48% 52% / 58% 58% 42% 42%" }}
+            ></div>
 
-          {/* Image */}
-          <div className="relative mt-6">
+            {/* Image */}
+            <div className="relative mt-6">
+              <Image
+                src="/Rufaro.png"
+                alt="Rufaro Ndhlovu"
+                width={600}
+                height={600}
+                className="object-contain z-10"
+              />
+            </div>
+
+            {/* Hero Card Image */}
             <Image
-              src="/Rufaro.png"
-              alt="Rufaro Ndhlovu"
-              width={600}
-              height={600}
-              className="object-contain z-10"
+              src="/HeroCardImg.png"
+              alt="Hero image of a developer object"
+              width={300}
+              height={300}
+              className="absolute bottom-10 mb-2 md:mb-4 md:right-[-10px] lg:right-[-40px] z-20"
             />
+
+            {/* Availability badge */}
+            <div className="absolute bottom-0 sm:bottom-4 lg:bottom-2 sm:left-18 bg-[var(--bg-card)] border border-white/10 px-4 py-2 rounded-full text-sm text-white backdrop-blur-md">
+              <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+              Available for opportunities
+            </div>
           </div>
 
-          {/* Hero Card Image */}
-          <Image
-            src="/HeroCardImg.png"
-            alt="Hero image of a developer object"
-            width={300}
-            height={300}
-            className="absolute bottom-10 right-[-20px] sm:right-[-40px] z-20"
-          />
-
-          {/* Availability badge */}
-          <div className="absolute bottom-1 sm:bottom-4 left-5 sm:left-18 bg-[var(--bg-card)] border border-white/10 px-4 py-2 rounded-full text-sm text-white backdrop-blur-md">
-            <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-            Available for opportunities
+          <div className="mt-10 sm:mt-8 pb-4">
+            <HeroLinks />
           </div>
-        </div>
-
-        <div className="mt-10 sm:mt-8">
-          <HeroLinks />
         </div>
       </div>
     </section>
