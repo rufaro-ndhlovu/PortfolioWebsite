@@ -14,7 +14,7 @@ export default function Hero() {
       style={{ background: "var(--bg-hero-img)" }}
     >
       <NavBar />
-      <div className="relative w-full min-h-screen flex items-center justify-between sm:px-4 md:px-4 lg:px-20 overflow-hidden sm:flex-col md:flex-row">
+      <div className="relative w-full min-h-screen flex items-center justify-between px-4 lg:px-20 overflow-hidden flex-col md:flex-row mt-5 sm:mt-0">
         {/* BACKGROUND GLOW */}
         <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full"></div>
 
@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="max-w-xl z-10 sm:mt-9 md:mt-0">
           <Label>HI, I'M</Label>
 
-          <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex sm:flex-row md:flex-col sm:gap-4 md:gap-0">
+          <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex flex-col sm:gap-4 md:gap-0">
             <span
               className="text-[var(--pink-main)] font-bold"
               style={{
@@ -72,7 +72,7 @@ export default function Hero() {
           ></div>
 
           {/* Image */}
-          <div className="relative sm:mt-6">
+          <div className="relative mt-6">
             <Image
               src="/Rufaro.png"
               alt="Rufaro Ndhlovu"
@@ -88,17 +88,17 @@ export default function Hero() {
             alt="Hero image of a developer object"
             width={300}
             height={300}
-            className="absolute bottom-10 right-[-40px] z-20"
+            className="absolute bottom-10 right-[-20px] sm:right-[-40px] z-20"
           />
 
           {/* Availability badge */}
-          <div className="absolute bottom-4 left-18 bg-[var(--bg-card)] border border-white/10 px-4 py-2 rounded-full text-sm text-white backdrop-blur-md">
+          <div className="absolute bottom-1 sm:bottom-4 left-5 sm:left-18 bg-[var(--bg-card)] border border-white/10 px-4 py-2 rounded-full text-sm text-white backdrop-blur-md">
             <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>
             Available for opportunities
           </div>
         </div>
 
-        <div className="sm:mt-8">
+        <div className="mt-10 sm:mt-8">
           <HeroLinks />
         </div>
       </div>
