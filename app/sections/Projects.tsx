@@ -7,7 +7,7 @@ import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <section className="p-4 bg-[var(--bg-section)] shadow-md">
+    <section className="px-4 py-5 md:p-4 bg-[var(--bg-section)] shadow-md">
       <Label>PROJECTS</Label>
 
       <div className="mt-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

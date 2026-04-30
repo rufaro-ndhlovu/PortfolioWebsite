@@ -84,13 +84,13 @@ export default function Hero() {
             <Image
               src="/HeroCardImg.png"
               alt="Hero image of a developer object"
-              width={300}
-              height={300}
-              className="hidden md:block sm:absolute bottom-10 mb-2 md:mb-4 md:right-[-10px] lg:right-[-40px] z-20"
+              width={250}
+              height={250}
+              className="hidden sm:block sm:absolute bottom-10 mb-2 md:mb-4 md:left-[-10px] z-20"
             />
 
             {/* Availability badge */}
-            <div className="absolute bottom-0 sm:bottom-4 lg:bottom-2 sm:left-18 bg-[var(--bg-card)] border border-white/10 px-4 py-2 rounded-full text-sm text-white backdrop-blur-md">
+            <div className="absolute bottom-0 sm:bottom-1 lg:bottom-2 sm:left-18 bg-[var(--bg-card)] border border-white/10 px-4 py-2 rounded-full text-sm text-white backdrop-blur-md">
               <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>
               Available for opportunities
             </div>
