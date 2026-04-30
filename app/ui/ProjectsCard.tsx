@@ -20,7 +20,7 @@ export default function ProjectsCard({
   live,
 }: props) {
   return (
-    <div className="p-4 bg-[var(--bg-card)] shadow-md border border-[var(--pink-glow)] rounded-4xl gap-4 flex flex-col h-full">
+    <div className="p-4 bg-[var(--bg-card)] shadow-md border border-[var(--pink-glow)] rounded-4xl gap-4 flex flex-col h-full justify-between">
       <div className="flex justify-center">
         <Image
           src={image}
@@ -46,7 +46,7 @@ export default function ProjectsCard({
         ))}
       </div>
 
-      <div className="flex flex-row gap-4 ">
+      <div className="flex flex-row gap-4">
         {github && (
           <button className="text-[var(--pink-light)] font-bold border border-[var(--pink-glow)] rounded-full p-2 hover:bg-[var(--circle-pink)] hover:text-[var(--bg-dark)]">
             <a href={github} target="_blank" rel="noopener noreferrer">

@@ -10,7 +10,7 @@ export default function Projects() {
     <section className="p-4 bg-[var(--bg-section)] shadow-md">
       <Label>PROJECTS</Label>
 
-      <div className="mt-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-full">
+      <div className="mt-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <div key={project.id}>
             <ProjectsCard
