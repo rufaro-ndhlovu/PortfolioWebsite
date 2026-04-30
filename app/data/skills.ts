@@ -1,66 +1,76 @@
-export type Skill = {
-  name: string;
-  icon?: string;
+export type SkillCategory = {
+  title: string;
+  skills: {
+    name: string;
+  }[];
 };
 
-export const skills: Skill[] = [
+export const skillCategories: SkillCategory[] = [
   {
-    name: "HTML5",
-    icon: "H5",
+    title: "Languages",
+    skills: [
+      { name: "JavaScript ES6+" },
+      { name: "TypeScript" },
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "PHP" },
+    ],
   },
-  {
-    name: "CSS3",
-    icon: "CS",
-  },
-  {
-    name: "JavaScript",
-    icon: "JS",
-  },
-  {
-    name: "TypeScript",
-    icon: "TS",
-  },
-  {
-    name: "React",
-    icon: "⚛",
-  },
-  {
-    name: "Next.js",
-    icon: "N",
-  },
-  {
-    name: "PHP",
-    icon: "php",
-  },
-  {
-    name: "Node.js",
-    icon: "⬡",
-  },
-  {
-    name: "REST APIs",
-    icon: "API",
-  },
-  {
-    name: "SQL",
-    icon: "SQL",
-  },
-  {
-    name: "Git & GitHub",
-    icon: "Git",
-  },
-  {
-    name: "VS Code",
-    icon: "{}",
-  },
-];
 
-export const otherSkills = [
-  "Responsive Design",
-  "WCAG 2.2 AA",
-  "Problem Solving",
-  "Agile & Git Workflow",
-  "Formik + Yup",
-  "Firebase",
-  "MariaDB",
-  "WordPress",
+  {
+    title: "Frameworks & Libraries",
+    skills: [
+      { name: "React" },
+      { name: "Next.js" },
+      { name: "Redux" },
+      { name: "Bootstrap" },
+      { name: "jQuery" },
+      { name: "Leaflet" },
+      { name: "tailwind.css" },
+    ],
+  },
+
+  {
+    title: "Forms & State",
+    skills: [
+      { name: "Formik" },
+      { name: "Yup" },
+      { name: "Controlled Components" },
+      { name: "Validation UX" },
+    ],
+  },
+
+  {
+    title: "Back-End & Databases",
+    skills: [
+      { name: "Node.js" },
+      { name: "MongoDB" },
+      { name: "MySQL" },
+      { name: "MariaDB" },
+      { name: "PostgreSQL" },
+      { name: "Firebase" },
+      { name: "REST APIs" },
+    ],
+  },
+
+  {
+    title: "Tools & Workflow",
+    skills: [
+      { name: "Git & GitHub" },
+      { name: "Agile/Scrum" },
+      { name: "WordPress" },
+      { name: "ESLint" },
+      { name: "Prettier" },
+      { name: "VS Code" },
+    ],
+  },
+
+  {
+    title: "Currently Learning",
+    skills: [
+      { name: "Jest" },
+      { name: "React Testing Library" },
+      { name: "WCAG Advanced" },
+    ],
+  },
 ];
