@@ -86,7 +86,7 @@ export default function Hero() {
               alt="Hero image of a developer object"
               width={300}
               height={300}
-              className="absolute bottom-10 mb-2 md:mb-4 md:right-[-10px] lg:right-[-40px] z-20"
+              className="hidden md:block sm:absolute bottom-10 mb-2 md:mb-4 md:right-[-10px] lg:right-[-40px] z-20"
             />
 
             {/* Availability badge */}
