@@ -5,7 +5,7 @@ import Button from "./Button";
 
 export default function ContactForm() {
   return (
-    <div className="bg-[var(--bg-card)] mt-8 p-6 rounded-lg border border-white/10 backdrop-blur-md">
+    <div className="bg-[var(--bg-card)] mt-4 p-6 rounded-lg border border-white/10 backdrop-blur-md">
       <form className="flex flex-col gap-4 text-[var(--text-muted)]">
         <label htmlFor="name">Your name:</label>
         <input
