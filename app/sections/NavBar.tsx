@@ -10,7 +10,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="w-full mt-0 flex flex-row justify-between items-center sm:px-5 py-3 lg:px-20 bg-transparent">
+    <nav className="w-full mt-0 flex flex-row justify-between items-center px-5 py-3 lg:px-20">
       <Logo />
       <div className="md:flex gap-6 hidden">
         <Link href="/" className="text-[var(--text-hero)]">
