@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="relative" style={{ background: "var(--bg-hero-img)" }}>
       <NavBar />
-      <div className="relative w-full min-h-screen flex items-center justify-between px-4 lg:px-20 overflow-hidden flex-col md:flex-row mt-5 sm:mt-0">
+      <div className="relative w-full min-h-screen flex items-center justify-between px-4 py-4 lg:px-20 overflow-hidden flex-col lg:flex-row mt-5 sm:mt-0">
         {/* BACKGROUND GLOW */}
         <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
 
@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="max-w-xl z-10 sm:mt-9 md:mt-0">
           <Label>HI, I'M</Label>
 
-          <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex flex-col sm:gap-4 md:gap-0">
+          <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex flex-col md:flex-row lg:flex-col sm:gap-4 md:gap-0">
             <span
               className="text-[var(--pink-main)] font-bold"
               style={{
