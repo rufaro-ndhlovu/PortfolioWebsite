@@ -17,7 +17,7 @@ export default function About() {
         >
           Developer. Problem solver. <br />
           <span
-            className="italic"
+            className="italic text-[var(--pink-main)] font-bold"
             style={{
               fontFamily: "var(--font-petitFormalScript)",
             }}
