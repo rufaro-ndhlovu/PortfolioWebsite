@@ -48,7 +48,7 @@ export default function ProjectsCard({
 
       <div className="flex flex-row gap-4">
         {github && (
-          <button className="text-[var(--pink-light)] font-bold border border-[var(--pink-glow)] rounded-full p-2 hover:bg-[var(--circle-pink)] hover:text-[var(--bg-dark)]">
+          <button className="text-[var(--pink-light)] font-bold border border-[var(--pink-glow)] rounded-full p-2 hover:bg-[var(--circle-pink)] hover:text-[var(--bg-dark)] text-sm md:text-base">
             <a href={github} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>

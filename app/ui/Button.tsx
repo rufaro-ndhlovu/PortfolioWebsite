@@ -10,7 +10,7 @@ type props = {
 export default function Button({ children, onClick, color }: props) {
   return (
     <button
-      className={`py-2 px-3 rounded-full font-bold flex gap-2 items-center 
+      className={`py-2 px-3 rounded-full font-bold flex gap-2 items-center text-sm md:text-base
       bg-[var(--${color})] text-[var(--text-dark)] hover:text-[var(--text-hero)]
       hover:bg-[var(--circle-pink)] transition`}
       onClick={onClick}
