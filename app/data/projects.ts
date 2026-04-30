@@ -73,7 +73,7 @@ export const projects: Project[] = [
       "Framer Motion",
     ],
     stackLabel: "Frontend",
-    github: "https://github.com/yourusername/portfolio",
-    live: "https://your-portfolio.vercel.app",
+    github: "https://github.com/rufaro-ndhlovu/PortfolioWebsite",
+    live: "https://rufarondhlovu.co.uk/",
   },
 ];
