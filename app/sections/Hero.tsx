@@ -11,15 +11,15 @@ export default function Hero() {
   return (
     <section className="relative" style={{ background: "var(--bg-hero-img)" }}>
       <NavBar />
-      <div className="relative w-full min-h-screen flex items-center justify-between px-4 py-4 lg:px-20 overflow-hidden flex-col lg:flex-row ">
+      <div className="relative w-full min-h-screen flex items-center md:justify-center lg:justify-between px-4 py-4 lg:px-20 overflow-hidden flex-col lg:flex-row ">
         {/* BACKGROUND GLOW */}
         <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
 
         {/* LEFT SIDE */}
-        <div className="max-w-xl z-10 sm:mt-8">
+        <div className="max-w-xl z-10 pt-2 lg:pt-0">
           <Label>HI, I'M</Label>
 
-          <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex flex-col md:flex-row lg:flex-col sm:gap-4 md:gap-0">
+          <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex flex-col md:flex-row lg:flex-col sm:gap-4 md:gap-4">
             <span
               className="text-[var(--pink-main)] font-bold"
               style={{
@@ -54,7 +54,7 @@ export default function Hero() {
               View My Work
             </Button>
 
-            <button className="py-2 px-3 rounded-full font-bold text-[var(--text-hero)] bg-transparent border border-[var(--pink-main)] backdrop-blur-md">
+            <button className="py-2 px-3 rounded-full font-bold text-[var(--text-hero)] bg-transparent border border-[var(--pink-main)] backdrop-blur-md sm:text-sm md:text-base">
               Download CV
             </button>
           </div>
