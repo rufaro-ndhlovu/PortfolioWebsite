@@ -53,3 +53,14 @@ export const skills: Skill[] = [
     icon: "{}",
   },
 ];
+
+export const otherSkills = [
+  "Responsive Design",
+  "WCAG 2.2 AA",
+  "Problem Solving",
+  "Agile & Git Workflow",
+  "Formik + Yup",
+  "Firebase",
+  "MariaDB",
+  "WordPress",
+];

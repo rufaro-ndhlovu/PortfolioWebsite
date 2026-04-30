@@ -10,7 +10,7 @@ type props = {
 
 export default function SkillsCard({ key, name, icon }: props) {
   return (
-    <div className="bg-[var(--bg-card)] p-4 rounded-full shadow-md text-[var(--text-dark)]">
+    <div className="bg-[var(--bg-card)] p-4 rounded-full shadow-md text-[var(--pink-light)] border border-[var(--pink-glow)]">
       {icon && <span className="text-sm">{icon}</span>}
       <h3 className="text-sm font-bold mt-2">{name}</h3>
     </div>
