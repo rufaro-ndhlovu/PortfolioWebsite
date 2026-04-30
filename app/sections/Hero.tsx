@@ -13,7 +13,7 @@ export default function Hero() {
       <NavBar />
       <div className="relative w-full min-h-screen flex items-center justify-between px-4 lg:px-20 overflow-hidden flex-col md:flex-row mt-5 sm:mt-0">
         {/* BACKGROUND GLOW */}
-        <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full"></div>
+        <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
 
         {/* LEFT SIDE */}
         <div className="max-w-xl z-10 sm:mt-9 md:mt-0">
