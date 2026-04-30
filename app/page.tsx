@@ -8,8 +8,10 @@ export default function Home() {
   return (
     <div className="">
       <Hero />
-      <About />
-      <Skills />
+      <div className="grid sm:grid-cols-1 md:grid-cols-2">
+        <About />
+        <Skills />
+      </div>
     </div>
   );
 }
