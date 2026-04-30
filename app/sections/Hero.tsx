@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="relative" style={{ background: "var(--bg-hero-img)" }}>
       <NavBar />
-      <div className="relative w-full min-h-screen flex items-center md:justify-center lg:justify-between px-4 py-4 lg:px-20 overflow-hidden flex-col lg:flex-row ">
+      <div className="relative w-full min-h-screen flex items-center md:justify-evenly lg:justify-between px-4 py-4 lg:px-20 overflow-hidden flex-col lg:flex-row ">
         {/* BACKGROUND GLOW */}
         <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
 
