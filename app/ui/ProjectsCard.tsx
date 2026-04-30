@@ -20,7 +20,7 @@ export default function ProjectsCard({
   live,
 }: props) {
   return (
-    <div className="p-4 bg-[var(--bg-card)] shadow-md border border-[var(--pink-glow)] rounded-4xl gap-6">
+    <div className="p-4 bg-[var(--bg-card)] shadow-md border border-[var(--pink-glow)] rounded-4xl gap-4 flex flex-col h-full">
       <div className="flex justify-center">
         <Image
           src={image}
@@ -31,11 +31,11 @@ export default function ProjectsCard({
         />
       </div>
 
-      <h3 className="mt-4 text-[var(--text-dark)] mb-2 font-bold sm:text-md lg:text-lg text-[var(--font-playfair)]">
+      <h3 className=" text-[var(--text-dark)] font-bold sm:text-md lg:text-lg text-[var(--font-playfair)]">
         {title}
       </h3>
       <p className="text-[var(--pink-light)]">{description}</p>
-      <div className="mt-4 flex flex-row flex-wrap gap-2">
+      <div className=" flex flex-row flex-wrap gap-2">
         {techStack.map((tech) => (
           <div
             key={tech}
@@ -46,7 +46,7 @@ export default function ProjectsCard({
         ))}
       </div>
 
-      <div className="flex flex-row gap-4 mt-2">
+      <div className="flex flex-row gap-4 ">
         {github && (
           <button className="text-[var(--pink-light)] font-bold border border-[var(--pink-glow)] rounded-full p-2 hover:bg-[var(--circle-pink)] hover:text-[var(--bg-dark)]">
             <a href={github} target="_blank" rel="noopener noreferrer">
