@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="max-w-xl z-10 pt-2 lg:pt-0">
           <Label>HI, I'M</Label>
 
-          <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex flex-col md:flex-row lg:flex-col sm:gap-4 md:gap-4">
+          <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex flex-col md:flex-row lg:flex-col md:gap-4 gap-0">
             <span
               className="text-[var(--pink-main)] font-bold"
               style={{
@@ -96,7 +96,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="mt-10 sm:mt-8 pb-4">
+          <div className="mt-10 sm:mt-8 pb-4 ">
             <HeroLinks />
           </div>
         </div>

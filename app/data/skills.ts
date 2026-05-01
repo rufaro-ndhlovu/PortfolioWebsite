@@ -64,13 +64,4 @@ export const skillCategories: SkillCategory[] = [
       { name: "VS Code" },
     ],
   },
-
-  {
-    title: "Currently Learning",
-    skills: [
-      { name: "Jest" },
-      { name: "React Testing Library" },
-      { name: "WCAG Advanced" },
-    ],
-  },
 ];

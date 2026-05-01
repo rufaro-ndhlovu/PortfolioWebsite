@@ -3,14 +3,14 @@
 import React from "react";
 import Label from "../ui/Label";
 import ContactForm from "../ui/ContactForm";
-import HeroLinks from "../ui/Herolinks";
 import { FaHeart } from "react-icons/fa";
+import ContactLinks from "../ui/ContactLinks";
 
 export default function Contact() {
   return (
-    <section className="p-4 bg-[var(--bg-dark)]">
+    <section className="px-4 py-6 bg-[var(--bg-dark)]">
       <Label>Contact</Label>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-4">
         <div>
           <h2
             className="font-bold text-[var(--pink-light)] mt-4 text-2xl"
@@ -26,6 +26,8 @@ export default function Contact() {
             you have a Front-End Developer role in mind or just want to chat
             about building something great - I'd love to hear from you.
           </p>
+
+          <ContactLinks />
         </div>
 
         <div>
