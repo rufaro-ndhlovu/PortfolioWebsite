@@ -10,12 +10,12 @@ import { IoLocation } from "react-icons/io5";
 
 export default function Contact() {
   return (
-    <section className="px-4 py-6 bg-[var(--bg-dark)]">
+    <section className="px-4 py-6 bg-[var(--bg-dark)] ">
       <Label>Contact</Label>
       <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-4">
         <div>
           <h2
-            className="font-bold text-[var(--pink-light)] mt-4 text-2xl lg:text-3xl"
+            className="font-bold text-[var(--pink-main)] mt-4 text-2xl md:text-3xl italic"
             style={{
               fontFamily: "var(--font-petitFormalScript)",
             }}
@@ -30,7 +30,7 @@ export default function Contact() {
           </p>
 
           <ContactLinks />
-          <div className="flex flex-col gap-4 text-[var(--bg-hero-light)] mt-6">
+          <div className="flex flex-col gap-2 text-[var(--bg-hero-light)] mt-6">
             <p className="flex flex-row items-center gap-2">
               <MdEmail /> farohanna@gmail.com
             </p>
@@ -40,7 +40,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div>
+        <div className="px-4 md:px-7 py-2 md:py-0">
           <ContactForm />
         </div>
       </div>
