@@ -5,13 +5,13 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function ContactLinks() {
   return (
-    <div className="flex  flex-row gap-4 text-3xl sm:right-0 z-100">
+    <div className="flex  flex-row gap-4 text-3xl sm:right-0 z-100  text-[var(--bg-hero-light)]">
       <a
         href="https://github.com/rufaro-ndhlovu"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaGithub color="white" />
+        <FaGithub />
       </a>
 
       <a
@@ -19,7 +19,7 @@ export default function ContactLinks() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaLinkedin color="white" />
+        <FaLinkedin />
       </a>
 
       <a
@@ -27,7 +27,7 @@ export default function ContactLinks() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaEnvelope color="white" />
+        <FaEnvelope />
       </a>
     </div>
   );
