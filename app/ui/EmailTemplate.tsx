@@ -66,7 +66,7 @@ export const EmailTemplate = ({
               href="https://rufarondhlovu.co.uk"
               target="_blank"
             >
-              eimaam.dev
+              rufarondhlovu.co.uk
             </a>
             <br />
           </Text>

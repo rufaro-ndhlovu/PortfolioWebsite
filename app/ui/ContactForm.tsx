@@ -2,7 +2,9 @@
 
 import React, { useState } from "react";
 import { Astroid } from "lucide-react";
+import toast, { Toaster } from "react-hot-toast";
 
+// types/email.ts
 export interface EmailProps {
   name: string;
   email: string;
@@ -10,39 +12,36 @@ export interface EmailProps {
   message: string;
 }
 
-export default function ContactForm({
-  name,
-  email,
-  subject,
-  message,
-}: EmailProps) {
+export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
+  const [sending, setIsSending] = useState(false);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    const response = await fetch("/api/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-      }),
-    });
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) throw new Error("Failed to send");
 
-    const result = await response.json();
-    console.log(result);
+      toast.success("Message sent! I'll be in touch soon.");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    }
   };
 
   return (
     <div className="bg-[var(--bg-card)] mt-4 p-6 rounded-4xl border border-white/10 backdrop-blur-md">
+      <Toaster position="top-center" reverseOrder={false} />
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-2 text-[var(--text-muted)]"
@@ -56,6 +55,7 @@ export default function ContactForm({
           className="border border-[var(--pink-glow)] rounded-2xl p-2 bg-[var(--bg-section)]"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          required
         />
 
         <label htmlFor="email">Email</label>
@@ -67,6 +67,7 @@ export default function ContactForm({
           placeholder="example@corp.com"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          required
         />
 
         <label htmlFor="subject">Subject:</label>
@@ -79,6 +80,7 @@ export default function ContactForm({
           onChange={(e) =>
             setFormData({ ...formData, subject: e.target.value })
           }
+          required
         />
 
         <label htmlFor="message">Message</label>
@@ -90,6 +92,8 @@ export default function ContactForm({
           onChange={(e) =>
             setFormData({ ...formData, message: e.target.value })
           }
+          id="message"
+          required
         />
 
         <div className="flex flex-row items-center justify-center mt-2">
