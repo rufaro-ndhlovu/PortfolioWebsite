@@ -10,7 +10,7 @@ import { IoLocation } from "react-icons/io5";
 
 export default function Contact() {
   return (
-    <section className="px-4 py-6 bg-[var(--bg-dark)] ">
+    <section id="contact" className="px-4 py-6 bg-[var(--bg-dark)] ">
       <Label>Contact</Label>
       <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-4">
         <div>

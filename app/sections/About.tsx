@@ -6,7 +6,10 @@ import Tag from "../ui/Tag";
 
 export default function About() {
   return (
-    <section className="bg-[var(--bg-section)] px-5 py-5 md:py-10 text-[var(--text-dark)]">
+    <section
+      id="about"
+      className="bg-[var(--bg-section)] px-5 py-5 md:py-10 text-[var(--text-dark)]"
+    >
       <Label>ABOUT ME</Label>
       <div>
         <h2
