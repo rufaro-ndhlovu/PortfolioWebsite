@@ -14,7 +14,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Company Directory V2",
     description:
-      "A modern rebuild of my original Company Directory project using React and TypeScript, focused on reusable components, improved state management, responsive UI design, and cleaner architecture.",
+      "A full rebuild of my original Company Directory - this time built with React, Next.js App Router, and TypeScript from the ground up. I architected a scalable, fully typed component library, implemented secure CRUD API routes with server-side Firebase/Firestore validation, and designed accessible, error-resilient forms using Formik + Yup. The goal was to write code I'd be proud to hand off to a team.",
     image: "/companyDirectoryV2.png",
     techStack: ["React", "TypeScript", "CSS", "REST APIs", "Node.js"],
     stackLabel: "Full Stack",
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Company Directory V1",
     description:
-      "A mobile-first personnel management system created during a full stack developer traineeship using PHP, MySQL, JavaScript, and Bootstrap. Features CRUD functionality, department filtering, modal workflows, and database integration.",
+      "The project that started it all. Built during my Full-Stack Developer traineeship, this PHP/MySQL personnel management system features full CRUD operations, department filtering, modal-based workflows, and a responsive mobile-first interface designed for distributed team use. It's where I learned to connect the dots between front-end logic and backend data - and I haven't stopped since.",
     image: "/companyDirectoryV1.png",
     techStack: [
       "JavaScript",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     id: 3,
     title: "Gazetteer",
     description:
-      "A mobile-first travel and geography application using multiple APIs to display country information, maps, weather, and points of interest.",
+      "An interactive geography and travel explorer, pulling together multiple REST APIs to surface country profiles, live weather data, currency info, and points of interest — all overlaid on a Leaflet-powered map. Designed mobile-first with progressive enhancement for larger screens. This project pushed my async JavaScript skills hard and taught me how to wrangle unpredictable API responses into a smooth, reliable UX.",
     image: "/gazeteer.png",
     techStack: [
       "JavaScript",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     id: 4,
     title: "Portfolio Website",
     description:
-      "A custom developer portfolio designed and developed with a modern UI, smooth animations, responsive layouts, and reusable React components.",
+      "You're looking at it. Designed and built from scratch with Next.js, TypeScript, and Framer Motion - with a focus on performance, clean layout, and making a strong first impression. Every section, animation, and component was a deliberate choice.",
     image: "/portfolioWebsite.png",
     techStack: [
       "Next.js",

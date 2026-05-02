@@ -39,14 +39,26 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-4 text-[var(--pink-main)] font-semibold tracking-wide">
-            FULL-STACK DEVELOPER
-          </p>
+          <div className="mt-5 space-y-4 max-w-lg">
+            <p className="text-[var(--pink-main)] uppercase tracking-[0.25em] text-sm font-medium">
+              Front-End Developer
+            </p>
 
-          <p className="mt-4 text-[var(--text-secondary)] leading-relaxed">
-            I build scalable, accessible web applications from front to back,
-            turning ideas into performant, real-world products.
-          </p>
+            <h2
+              className="text-2xl md:text-xl leading-snug text-[var(--text-primary)]"
+              style={{
+                fontFamily: "var(--font-playfair)",
+              }}
+            >
+              Building digital experiences that are as thoughtful behind the
+              scenes as they are on the screen.
+            </h2>
+
+            <p className="text-[var(--text-secondary)] leading-relaxed text-base md:text-sm">
+              Driven by thoughtful problem-solving, intuitive experiences, and
+              building things that work seamlessly for the people using them.
+            </p>
+          </div>
 
           <div className="flex gap-4 mt-8">
             {/* 2 buttons side by side */}
