@@ -41,7 +41,6 @@ export default function ContactForm() {
 
   return (
     <div className="bg-[var(--bg-card)] mt-4 p-6 rounded-4xl border border-white/10 backdrop-blur-md">
-      <Toaster position="top-center" reverseOrder={false} />
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-2 text-[var(--text-muted)]"
