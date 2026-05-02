@@ -24,9 +24,10 @@ export default function Contact() {
           </h2>
 
           <p className="text-[var(--text-muted)] mt-4 mb-5">
-            I'm open to new opportunities and exciting collaborations. Whether
-            you have a Front-End Developer role in mind or just want to chat
-            about building something great - I'd love to hear from you.
+            I'm actively looking for Front-End Developer roles where I can build
+            things that matter. Whether you have a Front-End Developer role in
+            mind or just want to chat about building something great - I'd love
+            to hear from you.
           </p>
 
           <ContactLinks />

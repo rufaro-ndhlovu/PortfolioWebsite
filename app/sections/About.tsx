@@ -26,19 +26,37 @@ export default function About() {
           </span>
         </h2>
         <p className="text-[var(--pink-light)] mb-4">
-          I'm a Front-End Developer specialising in building responsive,
-          accessible, and user-focused web applications. With expertise in
-          JavaScript (ES6+), TypeScript, React, and Next.js, I translate complex
-          requirements into functional, beautiful UIs.
+          I'm Rufaro, a Front-End Developer passionate about creating clean,
+          responsive, and accessible applications that people genuinely enjoy
+          using. I love the balance of creativity and logic that comes with
+          front-end development, where thoughtful design meets technical
+          problem-solving.
         </p>
         <p className="text-[var(--pink-light)] mb-4">
-          i've led accessibility improvements to WCAG 2.2 AA standards,
-          engineered advanced survey logic at scale, and contributed to AI
-          discovery initiatives - always balancing craft with compliance.
+          My experience spans both personal projects and real-world systems,
+          giving me a strong understanding of how users interact with digital
+          products beyond just the visual layer. Through previous roles, I've
+          worked with dynamic interfaces, accessibility improvements, complex
+          validation flows, SQL data handling, and live troubleshooting, all of
+          which strengthened the way I approach building reliable user-focused
+          experiences.
+        </p>
+        <p className="text-[var(--pink-light)] mb-4">
+          What draws me to development is the process of turning ideas into
+          something tangible. I enjoy building interfaces that not only look
+          good but feel seamless to use, paying attention to the small details
+          that shape the overall experience.
+        </p>
+        <p className="text-[var(--pink-light)] mb-4">
+          I'm currently focused on deepening my skills in JavaScript, React,
+          Next.js, and modern front-end architecture while continuing to build
+          projects that challenge me creatively and technically.
         </p>
         <p className="text-[var(--pink-light)]">
-          Currently deepening my expertise in front-end testing (Jest, React
-          Testing Library) and advanced React/Next.js patterns.
+          Outside of tech, I’m usually exploring new places, trying new food
+          spots, staying active in the gym. A lot of the way I approach digital
+          experiences comes from observing how things feel, not just how they
+          function.
         </p>
         <div className="flex flex-row mt-6 gap-4">
           <Tag>Zambian</Tag>

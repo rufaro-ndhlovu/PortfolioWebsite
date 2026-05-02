@@ -20,7 +20,7 @@ const petitFormalScript = Petit_Formal_Script({
 
 export const metadata: Metadata = {
   title: "Rufaro Ndhlovu",
-  description: "portfolio Website",
+  description: "Portfolio Website",
 };
 
 export default function RootLayout({
