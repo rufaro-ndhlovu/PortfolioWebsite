@@ -57,7 +57,7 @@ export default function ProjectsCard({
         {live && (
           <Button onClick={() => {}} color="pink-main">
             <a href={live} target="_blank" rel="noopener noreferrer">
-              Live Demo
+              Live
             </a>
           </Button>
         )}
