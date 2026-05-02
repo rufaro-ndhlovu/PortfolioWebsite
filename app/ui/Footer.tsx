@@ -5,7 +5,7 @@ import { FaHeart } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--bg-section)] px-5 py-4 flex flex-col md:flex-row justify-center md:justify-between items-center">
+    <footer className="bg-[var(--bg-section)] px-5 py-4 flex flex-col md:flex-row justify-center md:justify-between items-center text-sm">
       <div className="text-[var(--pink-light)]">
         <p>&copy;2026 Rufaro Ndhlovu. All rights reserved.</p>
       </div>
