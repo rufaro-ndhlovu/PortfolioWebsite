@@ -45,7 +45,7 @@ export default function Hero() {
             </p>
 
             <h2
-              className="text-2xl md:text-xl leading-snug text-[var(--text-primary)]"
+              className="text-xl lg:text-2xl leading-snug text-[var(--text-primary)]"
               style={{
                 fontFamily: "var(--font-playfair)",
               }}
@@ -54,7 +54,7 @@ export default function Hero() {
               scenes as they are on the screen.
             </h2>
 
-            <p className="text-[var(--text-secondary)] leading-relaxed text-base md:text-sm">
+            <p className="text-[var(--text-secondary)] leading-relaxed text-sm md:text-base">
               Driven by thoughtful problem-solving, intuitive experiences, and
               building things that work seamlessly for the people using them.
             </p>
