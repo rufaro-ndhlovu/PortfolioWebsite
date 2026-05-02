@@ -7,7 +7,7 @@ import { skillCategories } from "../data/skills";
 
 export default function Skills() {
   return (
-    <section className="p-6 bg-[var(--bg-dark)]">
+    <section id="skills" className="p-6 bg-[var(--bg-dark)]">
       <Label>TECHNICAL SKILLS</Label>
       <div className="mt-8 space-y-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch ">
         {skillCategories.map((category) => (

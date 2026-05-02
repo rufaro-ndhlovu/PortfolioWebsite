@@ -43,7 +43,7 @@ export const projects: Project[] = [
     id: 3,
     title: "Gazetteer",
     description:
-      "An interactive geography and travel explorer, pulling together multiple REST APIs to surface country profiles, live weather data, currency info, and points of interest — all overlaid on a Leaflet-powered map. Designed mobile-first with progressive enhancement for larger screens. This project pushed my async JavaScript skills hard and taught me how to wrangle unpredictable API responses into a smooth, reliable UX.",
+      "An interactive geography and travel explorer, pulling together multiple REST APIs to surface country profiles, live weather data, currency info, and points of interest - all overlaid on a Leaflet-powered map. Designed mobile-first with progressive enhancement for larger screens. This project pushed my async JavaScript skills hard and taught me how to wrangle unpredictable API responses into a smooth, reliable UX.",
     image: "/gazeteer.png",
     techStack: [
       "JavaScript",
