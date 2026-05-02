@@ -47,16 +47,9 @@ export default function About() {
           good but feel seamless to use, paying attention to the small details
           that shape the overall experience.
         </p>
-        <p className="text-[var(--pink-light)] mb-4">
-          I'm currently focused on deepening my skills in JavaScript, React,
-          Next.js, and modern front-end architecture while continuing to build
-          projects that challenge me creatively and technically.
-        </p>
         <p className="text-[var(--pink-light)]">
           Outside of tech, I’m usually exploring new places, trying new food
-          spots, staying active in the gym. A lot of the way I approach digital
-          experiences comes from observing how things feel, not just how they
-          function.
+          spots or staying active in the gym.
         </p>
         <div className="flex flex-row mt-6 gap-4">
           <Tag>Zambian</Tag>
