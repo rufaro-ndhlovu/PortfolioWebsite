@@ -3,14 +3,15 @@
 import React from "react";
 import Image from "next/image";
 import Button from "../ui/Button";
-import NavBar from "./NavBar";
 import Label from "../ui/Label";
 import HeroLinks from "../ui/Herolinks";
 
 export default function Hero() {
   return (
-    <section className="relative" style={{ background: "var(--bg-hero-img)" }}>
-      <NavBar />
+    <section
+      className="relative pt-20 lg:pt-0"
+      style={{ background: "var(--bg-hero-img)" }}
+    >
       <div className="relative w-full min-h-screen flex items-center md:justify-evenly lg:justify-between px-4 py-4 lg:px-20 overflow-hidden flex-col lg:flex-row ">
         {/* BACKGROUND GLOW */}
         <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
@@ -53,11 +54,6 @@ export default function Hero() {
               Building digital experiences that are as thoughtful behind the
               scenes as they are on the screen.
             </h2>
-
-            <p className="text-[var(--text-secondary)] leading-relaxed text-sm md:text-base">
-              Driven by thoughtful problem-solving, intuitive experiences, and
-              building things that work seamlessly for the people using them.
-            </p>
           </div>
 
           <div className="flex gap-4 mt-8">
