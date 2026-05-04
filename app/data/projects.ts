@@ -16,7 +16,15 @@ export const projects: Project[] = [
     description:
       "A full rebuild of my original Company Directory - this time built with React, Next.js App Router, and TypeScript from the ground up. I architected a scalable, fully typed component library, implemented secure CRUD API routes with server-side Firebase/Firestore validation, and designed accessible, error-resilient forms using Formik + Yup. The goal was to write code I'd be proud to hand off to a team.",
     image: "/companyDirectoryV2.png",
-    techStack: ["React", "TypeScript", "CSS", "REST APIs", "Node.js"],
+    techStack: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "CSS",
+      "REST APIs",
+      "Node.js",
+      "Firebase",
+    ],
     stackLabel: "Full Stack",
     github: "https://github.com/rufaro-ndhlovu/employee-directory-v2",
     live: "https://employee-directory-v2-seven.vercel.app/",
@@ -36,8 +44,9 @@ export const projects: Project[] = [
       "REST APIs",
     ],
     stackLabel: "Full Stack",
-    github: "Please email for access",
-    live: "https://rufarondhlovu.co.uk/project2/",
+    github:
+      "https://github.com/rufaro-ndhlovu/RufaroNdhlovu/tree/master/project2",
+    live: "https://home-5020371659.app-ionos.space/project2/",
   },
   {
     id: 3,
@@ -55,8 +64,9 @@ export const projects: Project[] = [
       "REST APIs",
     ],
     stackLabel: "Full Stack",
-    github: "Please email for access",
-    live: "https://rufarondhlovu.co.uk/project1/",
+    github:
+      "https://github.com/rufaro-ndhlovu/RufaroNdhlovu/tree/master/project1",
+    live: "https://home-5020371659.app-ionos.space/project1/",
   },
 
   {
