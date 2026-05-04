@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 
 export default function NavBarMob({ scrollToSection }: any) {
   return (
-    <div className="md:hidden gap-2 flex flex-col items-center border border-[var(--pink-glow)] bg-[var(--bg-hero-mid)] rounded-xl">
+    <div className="md:hidden gap-3 flex flex-col items-center border border-[var(--pink-glow)] bg-[var(--bg-hero-mid)] rounded-xl py-3">
       <button
         onClick={() => scrollToSection("about")}
         className="text-[var(--text-hero)] cursor-pointer bg-transparent border-none"
@@ -32,7 +32,7 @@ export default function NavBarMob({ scrollToSection }: any) {
         Contact
       </button>
 
-      <div className="pb-2 mt-2">
+      <div className="mt-2">
         <Button color="bg-card" onClick={() => scrollToSection("contact")}>
           Lets Work Together
         </Button>
