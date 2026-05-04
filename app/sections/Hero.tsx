@@ -68,9 +68,13 @@ export default function Hero() {
                 View My Work
               </Button>
 
-              <button className="py-2 px-3 rounded-full font-bold text-[var(--text-hero)] bg-transparent border border-[var(--pink-main)] backdrop-blur-md sm:text-sm md:text-base">
+              <a
+                href="/RufaroNdhlovuCV.pdf"
+                download="RufaroNdhlovuCV"
+                className="py-2 px-3 rounded-full font-bold text-[var(--text-hero)] bg-transparent border border-[var(--pink-main)] backdrop-blur-md sm:text-sm md:text-base hover:bg-[var(--bg-card)] hover:text-[var(--text-dark)] hover:border-[var(--bg-card)]"
+              >
                 Download CV
-              </button>
+              </a>
             </div>
           </div>
 
