@@ -5,20 +5,20 @@ import Button from "../ui/Button";
 import { TiThMenuOutline } from "react-icons/ti";
 import NavBarMob from "./NavBarMobile";
 
+export const scrollToSection = (sectionId: string) => {
+  const section = document.getElementById(sectionId);
+  section?.scrollIntoView({ behavior: "smooth" });
+};
+
 export default function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
-
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    section?.scrollIntoView({ behavior: "smooth" });
-  };
 
   const handleShowMenu = () => {
     setShowMenu(!showMenu);
   };
 
   return (
-    <nav className="w-full mt-0 px-5 py-3 lg:px-20 bg-[var(--bg-hero-mid)] z-1000 fixed">
+    <nav className="w-full mt-0 px-3 py-2 md:px-4 lg:px-10 bg-[var(--bg-hero-mid)] z-1000 fixed">
       <div className="flex flex-row justify-between items-center">
         <Logo />
         <div className="md:flex gap-8 hidden">
