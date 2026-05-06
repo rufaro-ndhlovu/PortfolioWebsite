@@ -20,7 +20,7 @@ export default function ProjectsCard({
   live,
 }: props) {
   return (
-    <div className="p-4 bg-[var(--bg-card)] shadow-md border border-[var(--pink-glow)] rounded-4xl gap-4 flex flex-col lg:flex-row h-full justify-center grid grid-cols-1 lg:grid-cols-2">
+    <div className="p-4 bg-[var(--bg-card)] shadow-md border border-[var(--pink-glow)] rounded-4xl gap-4 flex flex-col lg:flex-row h-full justify-evenly grid grid-cols-1 lg:grid-cols-2">
       <div className="flex justify-center">
         <img src={image} alt={`${title} screenshot`} className="rounded-lg" />
       </div>
