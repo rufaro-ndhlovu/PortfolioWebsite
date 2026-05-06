@@ -78,7 +78,7 @@ export default function ProjectsCard({
             preload="auto"
             playsInline
             poster={image}
-            className="w-full h-full object-cover rounded-lg hidden md:flex transition-transform duration-300"
+            className="w-full h-full object-cover rounded-lg hidden transition-transform duration-300"
           />
         </div>
       </motion.div>
