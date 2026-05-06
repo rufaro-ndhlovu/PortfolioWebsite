@@ -49,11 +49,9 @@ export default function NavBar() {
           </button>
         </div>
         <div className="hidden md:block">
-          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <Button color="bg-card" onClick={() => scrollToSection("contact")}>
-              Lets Work Together
-            </Button>
-          </motion.button>
+          <Button color="bg-card" onClick={() => scrollToSection("contact")}>
+            Lets Work Together
+          </Button>
         </div>
 
         <button

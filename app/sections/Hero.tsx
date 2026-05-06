@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 import Label from "../ui/Label";
 import HeroLinks from "../ui/Herolinks";
 import { scrollToSection } from "./NavBar";
-import { motion } from "motion/react";
+import { easeInOut, motion } from "motion/react";
 
 export default function Hero() {
   const handleViewWork = () => {
@@ -65,14 +65,10 @@ export default function Hero() {
 
             <div className="flex gap-4 mt-8">
               {/* 2 buttons side by side */}
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button color="pink-main" onClick={handleViewWork}>
-                  View My Work
-                </Button>
-              </motion.button>
+
+              <Button color="pink-main" onClick={handleViewWork}>
+                View My Work
+              </Button>
 
               <motion.button
                 whileHover={{ scale: 1.1 }}
