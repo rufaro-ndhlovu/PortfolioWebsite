@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import Button from "./Button";
+
+import { motion, useInView } from "framer-motion";
 
 type props = {
   title: string;
   description: string;
   image: string;
+  video?: string;
   techStack: string[];
   github?: string;
   live?: string;
@@ -15,15 +18,59 @@ export default function ProjectsCard({
   title,
   description,
   image,
+  video,
   techStack,
   github,
   live,
 }: props) {
+  const ref = useRef(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const isInView = useInView(ref, {
+    amount: 0.4,
+  });
+
+  useEffect(() => {
+    if (!videoRef.current) return;
+
+    if (isInView) {
+      videoRef.current.play().catch((err) => {
+        console.log("VIDEO PLAY ERROR:", err);
+      });
+    } else {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  }, [isInView]);
+
   return (
     <div className="p-4 bg-[var(--bg-card)] shadow-md border border-[var(--pink-glow)] rounded-4xl gap-4 flex flex-col lg:flex-row h-full justify-evenly grid grid-cols-1 lg:grid-cols-2">
-      <div className="flex justify-center">
-        <img src={image} alt={`${title} screenshot`} className="rounded-lg" />
-      </div>
+      <motion.div
+        className="relative flex justify-center items-center"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div ref={ref} className="overflow-hidden rounded-lg">
+          <img
+            src={image}
+            alt={`${title} screenshot`}
+            className="rounded-lg"
+            style={{ position: "absolute", opacity: isInView ? 0 : 1 }}
+          />
+
+          <video
+            ref={videoRef}
+            src={video}
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover transition-opacity duration-500"
+            style={{ opacity: isInView ? 1 : 0 }}
+          />
+        </div>
+      </motion.div>
 
       <div className="flex flex-col justify-evenly gap-2 lg:gap-0">
         <h3 className=" text-[var(--text-dark)] font-bold sm:text-md lg:text-lg text-[var(--font-playfair)]">
