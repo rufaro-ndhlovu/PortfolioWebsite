@@ -55,7 +55,7 @@ export default function NavBar() {
         </div>
 
         <button
-          className="md:hidden border border-[var(--pink-glow)] bg-[var(--pink-main)] text-[var(--text-dark)] text-2xl rounded-lg p-1"
+          className="md:hidden border border-[var(--pink-glow)] bg-[var(--pink-main)] text-[var(--text-dark)] text-2xl rounded-lg p-1 hover:cursor-pointer"
           onClick={handleShowMenu}
         >
           <TiThMenuOutline />

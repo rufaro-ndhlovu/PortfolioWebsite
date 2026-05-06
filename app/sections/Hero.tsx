@@ -24,7 +24,12 @@ export default function Hero() {
           <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
 
           {/* LEFT SIDE */}
-          <div className="max-w-xl z-10 pt-2 lg:pt-0">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-xl z-10 pt-2 lg:pt-0"
+          >
             <Label>HI, I'M</Label>
 
             <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex flex-col md:flex-row lg:flex-col md:gap-4 gap-0">
@@ -83,7 +88,7 @@ export default function Hero() {
                 </a>
               </motion.button>
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT SIDE */}
           <motion.div
