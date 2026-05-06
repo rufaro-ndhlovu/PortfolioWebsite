@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Astroid } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
+import { motion } from "motion/react";
 
 // types/email.ts
 export interface EmailProps {
@@ -96,12 +97,14 @@ export default function ContactForm() {
         />
 
         <div className="flex flex-row items-center justify-center mt-2">
-          <button
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
             type="submit"
-            className="font-bold text-[var(--text-dark)] bg-[var(--pink-main)] py-3 px-4 rounded-full flex flex-row items-center gap-2"
+            className="font-bold text-[var(--text-dark)] bg-[var(--pink-main)] hover:bg-[var(--pink-light)] hover:text-[var(--text-body)] hover:cursor-pointer py-3 px-4 rounded-full flex flex-row items-center gap-2"
           >
             <Astroid size={16} color="#e8869a" strokeWidth={3} /> Send Message
-          </button>
+          </motion.button>
         </div>
       </form>
     </div>
