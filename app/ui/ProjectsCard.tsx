@@ -65,8 +65,10 @@ export default function ProjectsCard({
             src={video}
             muted
             loop
+            preload="auto"
             playsInline
-            className="w-full h-full object-cover transition-opacity duration-500"
+            poster={image}
+            className="w-full h-full object-cover rounded-lg"
             style={{ opacity: isInView ? 1 : 0 }}
           />
         </div>
