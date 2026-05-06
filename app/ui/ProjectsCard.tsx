@@ -51,31 +51,22 @@ export default function ProjectsCard({
         transition={{ duration: 0.6 }}
       >
         <div ref={ref} className="relative overflow-hidden rounded-lg">
-          {/* VIDEO */}
-
-          <video
-            ref={videoRef}
-            muted
-            loop
-            autoPlay
-            playsInline
-            poster={image}
-            controls
-            preload="metadata"
-            className={`w-full h-full object-cover rounded-lg transition-opacity duration-500 ${
-              isInView ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <source src={video} />
-            Sorry, your browser doesn't support videos.
-          </video>
-
           <img
             src={image}
-            alt={title}
-            className={`absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-500 ${
-              isInView ? "opacity-0" : "opacity-100"
-            }`}
+            alt={`${title} screenshot`}
+            className="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300"
+            style={{ opacity: isInView ? 0 : 1 }}
+          />
+          <video
+            ref={videoRef}
+            src={video}
+            muted
+            loop
+            preload="auto"
+            playsInline
+            poster={image}
+            className="w-full h-full object-cover rounded-lg transition-opacity duration-300"
+            style={{ opacity: isInView ? 1 : 0 }}
           />
         </div>
       </motion.div>
