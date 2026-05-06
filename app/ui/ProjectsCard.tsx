@@ -38,7 +38,6 @@ export default function ProjectsCard({
       });
     } else {
       videoRef.current.pause();
-      videoRef.current.currentTime = 0;
     }
   }, [isInView]);
 
@@ -51,26 +50,33 @@ export default function ProjectsCard({
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div ref={ref} className="overflow-hidden rounded-lg">
-          {video && isInView ? (
-            <video
-              ref={videoRef}
-              src={video}
-              muted
-              loop
-              autoPlay
-              preload="auto"
-              playsInline
-              poster={image}
-              className="w-full h-full object-cover rounded-lg transition-transform duration-300"
-            />
-          ) : (
-            <img
-              src={image}
-              alt={`${title} screenshot`}
-              className="rounded-lg"
-            />
-          )}
+        <div ref={ref} className="relative overflow-hidden rounded-lg">
+          {/* VIDEO */}
+
+          <video
+            ref={videoRef}
+            muted
+            loop
+            autoPlay
+            playsInline
+            poster={image}
+            controls
+            preload="metadata"
+            className={`w-full h-full object-cover rounded-lg transition-opacity duration-500 ${
+              isInView ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <source src={video} />
+            Sorry, your browser doesn't support videos.
+          </video>
+
+          <img
+            src={image}
+            alt={title}
+            className={`absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-500 ${
+              isInView ? "opacity-0" : "opacity-100"
+            }`}
+          />
         </div>
       </motion.div>
 
