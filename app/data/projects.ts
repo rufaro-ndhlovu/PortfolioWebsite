@@ -3,6 +3,7 @@ export type Project = {
   title: string;
   description: string;
   image: string;
+  video?: string;
   techStack: string[];
   stackLabel: string;
   github?: string;
@@ -16,6 +17,7 @@ export const projects: Project[] = [
     description:
       "A full rebuild of my original Company Directory - this time built with React, Next.js App Router, and TypeScript from the ground up. I architected a scalable, fully typed component library, implemented secure CRUD API routes with server-side Firebase/Firestore validation, and designed accessible, error-resilient forms using Formik + Yup. The goal was to write code I'd be proud to hand off to a team.",
     image: "/companyDirectoryV2.png",
+    video: "/companyDirectoryV2_Video.mp4",
     techStack: [
       "React",
       "Next.js",
@@ -35,6 +37,7 @@ export const projects: Project[] = [
     description:
       "The project that started it all. Built during my Full-Stack Developer traineeship, this PHP/MySQL personnel management system features full CRUD operations, department filtering, modal-based workflows, and a responsive mobile-first interface designed for distributed team use. It's where I learned to connect the dots between front-end logic and backend data - and I haven't stopped since.",
     image: "/companyDirectoryV1.png",
+    video: "/companyDirectoryV1_Video.mp4",
     techStack: [
       "JavaScript",
       "PHP",
@@ -54,6 +57,7 @@ export const projects: Project[] = [
     description:
       "An interactive geography and travel explorer, pulling together multiple REST APIs to surface country profiles, live weather data, currency info, and points of interest - all overlaid on a Leaflet-powered map. Designed mobile-first with progressive enhancement for larger screens. This project pushed my async JavaScript skills hard and taught me how to wrangle unpredictable API responses into a smooth, reliable UX.",
     image: "/gazeteer.png",
+    video: "/GazeteerVideo.mp4",
     techStack: [
       "JavaScript",
       "HTML5",
@@ -75,6 +79,7 @@ export const projects: Project[] = [
     description:
       "You're looking at it. Designed and built from scratch with Next.js, TypeScript, and Framer Motion - with a focus on performance, clean layout, and making a strong first impression. Every section, animation, and component was a deliberate choice.",
     image: "/portfolioWebsite.png",
+    video: "/portfolioWebsite.mp4",
     techStack: [
       "Next.js",
       "React",
