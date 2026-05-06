@@ -4,6 +4,7 @@ import Logo from "../ui/Logo";
 import Button from "../ui/Button";
 import { TiThMenuOutline } from "react-icons/ti";
 import NavBarMob from "./NavBarMobile";
+import { motion } from "motion/react";
 
 export const scrollToSection = (sectionId: string) => {
   const section = document.getElementById(sectionId);
@@ -48,9 +49,11 @@ export default function NavBar() {
           </button>
         </div>
         <div className="hidden md:block">
-          <Button color="bg-card" onClick={() => scrollToSection("contact")}>
-            Lets Work Together
-          </Button>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+            <Button color="bg-card" onClick={() => scrollToSection("contact")}>
+              Lets Work Together
+            </Button>
+          </motion.button>
         </div>
 
         <button
