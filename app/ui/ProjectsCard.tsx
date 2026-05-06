@@ -52,11 +52,17 @@ export default function ProjectsCard({
         transition={{ duration: 0.6 }}
       >
         <div ref={ref} className="overflow-hidden rounded-lg">
-          {isInView ? (
-            <img
+          {video && isInView ? (
+            <video
+              ref={videoRef}
               src={video}
-              alt={`${title} screenshot`}
-              className="rounded-lg"
+              muted
+              loop
+              autoPlay
+              preload="auto"
+              playsInline
+              poster={image}
+              className="w-full h-full object-cover rounded-lg transition-transform duration-300"
             />
           ) : (
             <img
@@ -65,17 +71,6 @@ export default function ProjectsCard({
               className="rounded-lg"
             />
           )}
-
-          <video
-            ref={videoRef}
-            src={video}
-            muted
-            loop
-            preload="auto"
-            playsInline
-            poster={image}
-            className="w-full h-full object-cover rounded-lg hidden transition-transform duration-300"
-          />
         </div>
       </motion.div>
 
