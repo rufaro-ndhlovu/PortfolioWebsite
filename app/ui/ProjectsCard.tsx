@@ -24,26 +24,10 @@ export default function ProjectsCard({
 }: props) {
   const ref = useRef(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [userHasInteracted, setUserHasInteracted] = useState(false);
 
   const isInView = useInView(ref, {
     amount: 0.4,
   });
-
-  // Unlock autoplay on first interaction anywhere on the page
-  useEffect(() => {
-    const unlock = () => setUserHasInteracted(true);
-    window.addEventListener("click", unlock, { once: true });
-    window.addEventListener("touchstart", unlock, { once: true });
-    window.addEventListener("keydown", unlock, { once: true });
-    window.addEventListener("scroll", unlock, { once: true });
-    return () => {
-      window.removeEventListener("click", unlock);
-      window.removeEventListener("touchstart", unlock);
-      window.removeEventListener("keydown", unlock);
-      window.removeEventListener("scroll", unlock);
-    };
-  }, []);
 
   useEffect(() => {
     if (!videoRef.current) return;
@@ -56,7 +40,7 @@ export default function ProjectsCard({
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
     }
-  }, [isInView, userHasInteracted]);
+  }, [isInView]);
 
   return (
     <div className="p-4 bg-[var(--bg-card)] shadow-md border border-[var(--pink-glow)] rounded-4xl gap-4 flex flex-col lg:flex-row h-full justify-evenly grid grid-cols-1 lg:grid-cols-2">
@@ -68,7 +52,19 @@ export default function ProjectsCard({
         transition={{ duration: 0.6 }}
       >
         <div ref={ref} className="overflow-hidden rounded-lg">
-          <img src={image} alt={`${title} screenshot`} className="rounded-lg" />
+          {isInView ? (
+            <img
+              src={video}
+              alt={`${title} screenshot`}
+              className="rounded-lg"
+            />
+          ) : (
+            <img
+              src={image}
+              alt={`${title} screenshot`}
+              className="rounded-lg"
+            />
+          )}
 
           <video
             ref={videoRef}
