@@ -6,6 +6,7 @@ import Button from "../ui/Button";
 import Label from "../ui/Label";
 import HeroLinks from "../ui/Herolinks";
 import { scrollToSection } from "./NavBar";
+import { motion } from "motion/react";
 
 export default function Hero() {
   const handleViewWork = () => {
@@ -64,17 +65,27 @@ export default function Hero() {
 
             <div className="flex gap-4 mt-8">
               {/* 2 buttons side by side */}
-              <Button color="pink-main" onClick={handleViewWork}>
-                View My Work
-              </Button>
-
-              <a
-                href="/RufaroNdhlovuCV.pdf"
-                download="RufaroNdhlovuCV"
-                className="py-2 px-3 rounded-full font-bold text-[var(--text-hero)] bg-transparent border border-[var(--pink-main)] backdrop-blur-md sm:text-sm md:text-base hover:bg-[var(--bg-card)] hover:text-[var(--text-dark)] hover:border-[var(--bg-card)]"
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Download CV
-              </a>
+                <Button color="pink-main" onClick={handleViewWork}>
+                  View My Work
+                </Button>
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <a
+                  href="/RufaroNdhlovuCV.pdf"
+                  download="RufaroNdhlovuCV"
+                  className="py-2 px-3 rounded-full font-bold text-[var(--text-hero)] bg-transparent border border-[var(--pink-main)] backdrop-blur-md sm:text-sm md:text-base hover:bg-[var(--bg-card)] hover:text-[var(--text-dark)] hover:border-[var(--bg-card)]"
+                >
+                  Download CV
+                </a>
+              </motion.button>
             </div>
           </div>
 
