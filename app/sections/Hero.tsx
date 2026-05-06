@@ -30,44 +30,49 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="max-w-xl z-10 pt-2 lg:pt-0"
           >
-            <Label>HI, I'M</Label>
+            <motion.div
+              initial={{ opacity: 0, x: 40, filter: "blur(10px)" }}
+              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.8 }}
+            >
+              <Label>HI, I'M</Label>
 
-            <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex flex-col md:flex-row lg:flex-col md:gap-4 gap-0">
-              <span
-                className="text-[var(--pink-main)] font-bold"
-                style={{
-                  fontFamily: "var(--font-petitFormalScript)",
-                }}
-              >
-                Rufaro
-              </span>
+              <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex flex-col md:flex-row lg:flex-col md:gap-4 gap-0">
+                <span
+                  className="text-[var(--pink-main)] font-bold"
+                  style={{
+                    fontFamily: "var(--font-petitFormalScript)",
+                  }}
+                >
+                  Rufaro
+                </span>
 
-              <span
-                className="text-[var(--text-primary)]"
-                style={{
-                  fontFamily: "var(--font-playfair)",
-                }}
-              >
-                Ndhlovu
-              </span>
-            </h1>
+                <span
+                  className="text-[var(--text-primary)]"
+                  style={{
+                    fontFamily: "var(--font-playfair)",
+                  }}
+                >
+                  Ndhlovu
+                </span>
+              </h1>
 
-            <div className="mt-5 space-y-4 max-w-lg">
-              <p className="text-[var(--pink-main)] uppercase tracking-[0.25em] text-sm font-medium">
-                Front-End Developer
-              </p>
+              <div className="mt-5 space-y-4 max-w-lg">
+                <p className="text-[var(--pink-main)] uppercase tracking-[0.25em] text-sm font-medium">
+                  Front-End Developer
+                </p>
 
-              <h2
-                className="text-xl lg:text-2xl leading-snug text-[var(--text-primary)]"
-                style={{
-                  fontFamily: "var(--font-playfair)",
-                }}
-              >
-                Building digital experiences that are as thoughtful behind the
-                scenes as they are on the screen.
-              </h2>
-            </div>
-
+                <h2
+                  className="text-xl lg:text-2xl leading-snug text-[var(--text-primary)]"
+                  style={{
+                    fontFamily: "var(--font-playfair)",
+                  }}
+                >
+                  Building digital experiences that are as thoughtful behind the
+                  scenes as they are on the screen.
+                </h2>
+              </div>
+            </motion.div>
             <div className="flex gap-4 mt-8">
               {/* 2 buttons side by side */}
 
