@@ -20,13 +20,13 @@ export default function Skills() {
           {skillCategories.map((category) => (
             <div
               key={category.title}
-              className="h-full border border-[var(--pink-glow)] rounded-4xl p-4 bg-[var(--bg-section)]"
+              className="h-full border border-[var(--pink-glow)] rounded-4xl p-4 bg-[var(--bg-section)] bg-white/2 backdrop-blur-xl border-white/10"
             >
               <h3 className="text-sm uppercase tracking-[0.2em] text-[var(--pink-main)] mb-4">
                 {category.title}
               </h3>
 
-              <div className="flex flex-row flex-wrap gap-2 ">
+              <div className="flex flex-row flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <SkillsCard key={skill.name} name={skill.name} />
                 ))}

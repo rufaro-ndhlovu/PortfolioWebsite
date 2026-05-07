@@ -58,7 +58,7 @@ export default function ProjectsCard({
           {techStack.map((tech) => (
             <div
               key={tech}
-              className="text-xs text-[var(--text-dark)] bg-[var(--bg-section)] rounded-full border border-[var(--pink-glow)] p-2"
+              className="text-xs text-[var(--text-dark)] bg-[var(--bg-section)] rounded-full border bg-white/2 backdrop-blur-xl border-white/10 p-2"
             >
               {tech}
             </div>
@@ -67,7 +67,7 @@ export default function ProjectsCard({
 
         <div className="flex flex-row gap-4">
           {github && (
-            <button className="text-[var(--pink-light)] font-bold border border-[var(--pink-glow)] rounded-full p-2 hover:bg-[var(--circle-pink)] hover:text-[var(--bg-dark)] text-sm md:text-base">
+            <button className="text-[var(--pink-light)] font-bold border rounded-full p-2 hover:bg-[var(--circle-pink)] hover:text-[var(--bg-dark)] text-sm md:text-base bg-white/2 backdrop-blur-xl border-white/10">
               <a href={github} target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>

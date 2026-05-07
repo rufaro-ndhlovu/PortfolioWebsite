@@ -6,7 +6,7 @@ type props = {
 
 export default function Tag({ children }: props) {
   return (
-    <div className="rounded-full bg-transparent p-2 text-xs border border-[var(--pink-glow)]">
+    <div className="rounded-full bg-transparent p-2 text-xs border bg-white/2 backdrop-blur-xl border-white/10">
       {children}
     </div>
   );
