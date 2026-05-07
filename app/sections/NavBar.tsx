@@ -25,25 +25,25 @@ export default function NavBar() {
         <div className="md:flex gap-8 hidden">
           <button
             onClick={() => scrollToSection("about")}
-            className="text-[var(--text-hero)] cursor-pointer bg-transparent border-none"
+            className="p-2 font-bold text-[var(--text-hero)] cursor-pointer bg-transparent rounded-full border-none hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
           >
             About
           </button>
           <button
             onClick={() => scrollToSection("skills")}
-            className="text-[var(--text-hero)] cursor-pointer bg-transparent border-none"
+            className="p-2 font-bold text-[var(--text-hero)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
           >
             Skills
           </button>
           <button
             onClick={() => scrollToSection("projects")}
-            className="text-[var(--text-hero)] cursor-pointer bg-transparent border-none"
+            className="p-2 font-bold text-[var(--text-hero)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
           >
             Projects
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="text-[var(--text-hero)] cursor-pointer bg-transparent border-none"
+            className="p-2 font-bold text-[var(--text-hero)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
           >
             Contact
           </button>
