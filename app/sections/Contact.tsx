@@ -40,7 +40,7 @@ export default function Contact() {
             <ContactLinks />
             <div className="flex flex-col gap-2 text-[var(--bg-hero-light)] mt-6">
               <p className="flex flex-row items-center gap-2">
-                <MdEmail /> farohanna@gmail.com
+                <MdEmail /> farohanna@googlemail.com
               </p>
               <p className="flex flex-row items-center gap-2">
                 <IoLocation /> York, UK

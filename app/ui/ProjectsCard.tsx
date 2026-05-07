@@ -28,9 +28,9 @@ export default function ProjectsCard({
   });
 
   return (
-    <div className="p-4 bg-[var(--bg-card)] shadow-md border border-[var(--pink-glow)] rounded-4xl gap-8 grid grid-cols-1 lg:grid-cols-2 min-h-[350px]">
+    <div className="p-4  shadow-md border border-[var(--pink-glow)] rounded-4xl gap-8 grid grid-cols-1 lg:grid-cols-5 min-h-[350px] bg-white/2 backdrop-blur-xl border-white/10">
       <motion.div
-        className="relative flex justify-center items-center"
+        className="relative flex justify-center items-center col-span-3"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -38,7 +38,7 @@ export default function ProjectsCard({
       >
         <div
           ref={ref}
-          className="relative overflow-hidden rounded-lg aspect-video w-full"
+          className="relative overflow-hidden rounded-lg aspect-video w-full "
         >
           <Image
             src={image}
@@ -49,8 +49,8 @@ export default function ProjectsCard({
         </div>
       </motion.div>
 
-      <div className="flex flex-col justify-evenly gap-2 lg:gap-0">
-        <h3 className=" text-[var(--text-dark)] font-bold sm:text-md lg:text-lg text-[var(--font-playfair)]">
+      <div className="flex flex-col justify-evenly gap-2 lg:gap-0 col-span-2">
+        <h3 className=" text-[var(--text-dark)] font-bold sm:text-md lg:text-xl text-[var(--font-playfair)]">
           {title}
         </h3>
         <p className="text-[var(--pink-light)]">{description}</p>

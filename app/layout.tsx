@@ -20,7 +20,8 @@ const petitFormalScript = Petit_Formal_Script({
 
 export const metadata: Metadata = {
   title: "Rufaro Ndhlovu",
-  description: "Portfolio Website",
+  description:
+    "Rufaro Ndhlovu - Front-End Developer based in York, UK. React, Next.js, TypeScript.",
 };
 
 export default function RootLayout({
