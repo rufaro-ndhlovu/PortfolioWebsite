@@ -30,7 +30,6 @@ export default function Projects() {
                 github={project.github}
                 live={project.live}
                 image={project.image}
-                video={project.video}
               />
             </div>
           ))}
