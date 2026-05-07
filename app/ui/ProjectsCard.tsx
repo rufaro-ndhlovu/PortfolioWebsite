@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Button from "./Button";
+import Image from "next/image";
 
 import { motion, useInView } from "framer-motion";
 
@@ -7,7 +8,6 @@ type props = {
   title: string;
   description: string;
   image: string;
-  video?: string;
   techStack: string[];
   github?: string;
   live?: string;
@@ -17,32 +17,18 @@ export default function ProjectsCard({
   title,
   description,
   image,
-  video,
   techStack,
   github,
   live,
 }: props) {
   const ref = useRef(null);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const isInView = useInView(ref, {
     amount: 0.4,
   });
 
-  useEffect(() => {
-    if (!videoRef.current) return;
-
-    if (isInView) {
-      videoRef.current.play().catch((err) => {
-        console.log("VIDEO PLAY ERROR:", err);
-      });
-    } else {
-      videoRef.current.pause();
-    }
-  }, [isInView]);
-
   return (
-    <div className="p-4 bg-[var(--bg-card)] shadow-md border border-[var(--pink-glow)] rounded-4xl gap-4 flex flex-col lg:flex-row h-full justify-evenly grid grid-cols-1 lg:grid-cols-2">
+    <div className="p-4 bg-[var(--bg-card)] shadow-md border border-[var(--pink-glow)] rounded-4xl gap-8 grid grid-cols-1 lg:grid-cols-2 min-h-[350px]">
       <motion.div
         className="relative flex justify-center items-center"
         initial={{ opacity: 0, scale: 0.95 }}
@@ -50,23 +36,15 @@ export default function ProjectsCard({
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div ref={ref} className="relative overflow-hidden rounded-lg">
-          <img
+        <div
+          ref={ref}
+          className="relative overflow-hidden rounded-lg aspect-video w-full"
+        >
+          <Image
             src={image}
             alt={`${title} screenshot`}
-            className="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300"
-            style={{ opacity: isInView ? 0 : 1 }}
-          />
-          <video
-            ref={videoRef}
-            src={video}
-            muted
-            loop
-            preload="auto"
-            playsInline
-            poster={image}
-            className="w-full h-full object-cover rounded-lg transition-opacity duration-300"
-            style={{ opacity: isInView ? 1 : 0 }}
+            fill
+            className="object-cover rounded-3xl transition-transform duration-500 hover:scale-105"
           />
         </div>
       </motion.div>
