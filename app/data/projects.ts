@@ -29,7 +29,6 @@ export const projects: Project[] = [
     github: "https://github.com/rufaro-ndhlovu/employee-directory-v2",
     live: "https://employee-directory-v2-seven.vercel.app/",
   },
-  ,
   {
     id: 2,
     title: "Portfolio Website",
