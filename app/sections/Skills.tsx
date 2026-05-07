@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 
 export default function Skills() {
   return (
-    <section id="skills" className="p-6 bg-[var(--bg-dark)]">
+    <section id="skills" className="px-6 py-8 bg-[var(--bg-dark)]">
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}

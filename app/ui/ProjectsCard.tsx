@@ -56,22 +56,28 @@ export default function ProjectsCard({
         <p className="text-[var(--pink-light)]">{description}</p>
         <div className=" flex flex-row flex-wrap gap-2">
           {techStack.map((tech) => (
-            <div
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
               key={tech}
               className="text-xs text-[var(--text-dark)] bg-[var(--bg-section)] rounded-full border bg-white/2 backdrop-blur-xl border-white/10 p-2"
             >
               {tech}
-            </div>
+            </motion.div>
           ))}
         </div>
 
         <div className="flex flex-row gap-4">
           {github && (
-            <button className="text-[var(--pink-light)] font-bold border rounded-full p-2 hover:bg-[var(--circle-pink)] hover:text-[var(--bg-dark)] text-sm md:text-base bg-white/2 backdrop-blur-xl border-white/10">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-[var(--pink-light)] font-bold border rounded-full p-2 hover:bg-[var(--circle-pink)] hover:text-[var(--bg-dark)] text-sm md:text-base bg-white/2 backdrop-blur-xl border-white/10"
+            >
               <a href={github} target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
-            </button>
+            </motion.button>
           )}
           {live && (
             <Button onClick={() => {}} color="pink-main">

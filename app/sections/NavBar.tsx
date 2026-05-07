@@ -19,7 +19,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="w-full mt-0 px-3 py-2 md:px-4 lg:px-10 bg-[var(--bg-hero-mid)] z-1000 fixed">
+    <nav className="w-full mt-0 px-3 py-2 md:px-4 lg:px-10 bg-[var(--bg-hero-mid)] z-[1000] fixed">
       <div className="flex flex-row justify-between items-center">
         <Logo />
         <div className="md:flex gap-8 hidden">
@@ -62,7 +62,12 @@ export default function NavBar() {
         </button>
       </div>
 
-      {showMenu && <NavBarMob scrollToSection={scrollToSection} />}
+      {showMenu && (
+        <NavBarMob
+          setShowMenu={setShowMenu}
+          scrollToSection={scrollToSection}
+        />
+      )}
     </nav>
   );
 }
