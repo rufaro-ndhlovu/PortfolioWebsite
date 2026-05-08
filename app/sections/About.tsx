@@ -21,13 +21,15 @@ export default function About() {
         type: "words",
       });
 
+      if (!container.current) return;
+
       gsap.from(split.words, {
         scrollTrigger: ".aboutWords",
-        duration: 1.5,
+        duration: 1,
         y: 100,
         autoAlpha: 0,
         stagger: {
-          amount: 0.9,
+          amount: 0.8,
           from: "random",
         },
       });
