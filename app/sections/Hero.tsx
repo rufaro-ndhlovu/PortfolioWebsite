@@ -34,6 +34,14 @@ export default function Hero() {
           from: "random",
         },
       });
+
+      gsap.to(".availabilityBadge", {
+        y: -8,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
     },
     { scope: container },
   );
@@ -158,8 +166,9 @@ export default function Hero() {
               />
 
               {/* Availability badge */}
-              <div className="absolute bottom-0 sm:bottom-1 lg:bottom-2 sm:left-18 bg-[var(--bg-card)] border border-white/10 px-4 py-2 rounded-full text-sm text-white backdrop-blur-md">
-                <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+              <div className="availabilityBadge absolute bottom-0 sm:bottom-1 lg:bottom-2 sm:left-18 bg-[var(--bg-card)] border border-white/10 px-4 py-2 rounded-full text-sm text-white backdrop-blur-md">
+                <span className="absolute inline-flex h-2 w-2 rounded-full bg-green-400 opacity-75 animate-ping"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400"></span>
                 Available for opportunities
               </div>
             </div>
