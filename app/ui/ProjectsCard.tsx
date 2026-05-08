@@ -21,16 +21,19 @@ export default function ProjectsCard({
   github,
   live,
 }: props) {
+  // Create a ref to the card element
   const ref = useRef(null);
 
+  // Use the useInView hook to determine if the card is in the viewport
   const isInView = useInView(ref, {
     amount: 0.4,
   });
 
   return (
     <div className="p-4  shadow-md border border-[var(--pink-glow)] rounded-4xl gap-8 grid grid-cols-1 lg:grid-cols-5 min-h-[350px] bg-white/2 backdrop-blur-xl border-white/10">
+      {/* Image section with animation on scroll */}
       <motion.div
-        className="relative flex justify-center items-center col-span-3"
+        className="relative flex justify-center items-center md:col-span-3"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -40,6 +43,7 @@ export default function ProjectsCard({
           ref={ref}
           className="relative overflow-hidden rounded-lg aspect-video w-full "
         >
+          {/* Use Next.js Image component for optimized image loading */}
           <Image
             src={image}
             alt={`${title} screenshot`}
@@ -49,12 +53,14 @@ export default function ProjectsCard({
         </div>
       </motion.div>
 
-      <div className="flex flex-col justify-evenly gap-2 lg:gap-0 col-span-2">
+      <div className="flex flex-col justify-evenly gap-2 lg:gap-0 md:col-span-2">
+        {/* Project title and description */}
         <h3 className=" text-[var(--text-dark)] font-bold sm:text-md lg:text-xl text-[var(--font-playfair)]">
           {title}
         </h3>
         <p className="text-[var(--pink-light)]">{description}</p>
         <div className=" flex flex-row flex-wrap gap-2">
+          {/* Tech stack badges with hover animation */}
           {techStack.map((tech) => (
             <motion.div
               whileHover={{ scale: 1.1 }}
@@ -68,6 +74,7 @@ export default function ProjectsCard({
         </div>
 
         <div className="flex flex-row gap-4">
+          {/* GitHub and Live buttons with hover animations */}
           {github && (
             <motion.button
               whileHover={{ scale: 1.1 }}
