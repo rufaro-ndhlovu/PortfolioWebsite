@@ -11,7 +11,6 @@ import { easeInOut, motion } from "motion/react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
-import SplitType from "split-type";
 
 gsap.registerPlugin(useGSAP, SplitText);
 
@@ -20,14 +19,18 @@ export default function Hero() {
 
   useGSAP(
     () => {
-      let split = new SplitType(".heroHead", {
-        types: "chars",
+      let split = SplitText.create(".heroHead", {
+        type: "chars",
       });
 
       gsap.from(split.chars, {
-        y: 100,
+        x: 100,
         autoAlpha: 0,
-        stagger: 0.1,
+        yoyo: true,
+        stagger: {
+          amount: 0.8,
+          from: "random",
+        },
       });
     },
     { scope: container },
@@ -39,7 +42,7 @@ export default function Hero() {
 
   useGSAP(
     () => {
-      gsap.from(".leftDiv", { y: 100 });
+      gsap.from(".leftDiv", { x: 100 });
     },
     { scope: container },
   );
