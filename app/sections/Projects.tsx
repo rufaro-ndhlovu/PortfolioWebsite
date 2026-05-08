@@ -20,7 +20,7 @@ export default function Projects() {
       >
         <Label>PROJECTS</Label>
 
-        <div className="mt-6 grid grid-rows-4 gap-6">
+        <div className="mt-6 grid gap-6">
           {projects.map((project) => (
             <div key={project.id}>
               <ProjectsCard

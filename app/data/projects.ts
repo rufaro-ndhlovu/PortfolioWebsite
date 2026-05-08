@@ -66,7 +66,6 @@ export const projects: Project[] = [
       "https://github.com/rufaro-ndhlovu/RufaroNdhlovu/tree/master/project1",
     live: "https://home-5020371659.app-ionos.space/project1/",
   },
-
   {
     id: 4,
     title: "Company Directory V1",
