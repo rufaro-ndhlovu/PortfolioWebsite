@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Button from "../ui/Button";
 import Label from "../ui/Label";
@@ -8,38 +8,61 @@ import HeroLinks from "../ui/Herolinks";
 import { scrollToSection } from "./NavBar";
 import { easeInOut, motion } from "motion/react";
 
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/SplitText";
+import SplitType from "split-type";
+
+gsap.registerPlugin(useGSAP, SplitText);
+
 export default function Hero() {
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      let split = new SplitType(".heroHead", {
+        types: "chars",
+      });
+
+      gsap.from(split.chars, {
+        y: 100,
+        autoAlpha: 0,
+        stagger: 0.1,
+      });
+    },
+    { scope: container },
+  );
+
   const handleViewWork = () => {
     scrollToSection("projects");
   };
+
+  useGSAP(
+    () => {
+      gsap.from(".leftDiv", { y: 100 });
+    },
+    { scope: container },
+  );
 
   return (
     <div>
       <section
         className="relative pt-20 lg:pt-0"
         style={{ background: "var(--bg-hero-img)" }}
+        ref={container}
       >
         <div className="relative w-full min-h-screen flex items-center md:justify-evenly lg:justify-between px-4 py-4 lg:px-20 overflow-hidden flex-col lg:flex-row ">
           {/* BACKGROUND GLOW */}
           <div className="absolute top-[-100px] right-[-100px] sm:w-[500px] sm:h-[500px] md:w-[900px] md:h-[900px] bg-[var(--pink-main)] opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
 
           {/* LEFT SIDE */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-xl z-10 pt-2 lg:pt-0"
-          >
-            <motion.div
-              initial={{ opacity: 0, x: 40, filter: "blur(10px)" }}
-              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.8 }}
-            >
+          <div className="leftDiv max-w-xl z-10 pt-2 lg:pt-0">
+            <div>
               <Label>HI, I'M</Label>
 
               <h1 className="text-6xl lg:text-8xl leading-tight font-serif flex flex-col md:flex-row lg:flex-col md:gap-4 gap-0">
                 <span
-                  className="text-[var(--pink-main)] font-bold"
+                  className="heroHead text-[var(--pink-main)] font-bold"
                   style={{
                     fontFamily: "var(--font-petitFormalScript)",
                   }}
@@ -48,7 +71,7 @@ export default function Hero() {
                 </span>
 
                 <span
-                  className="text-[var(--text-primary)]"
+                  className=" heroHead text-[var(--text-primary)]"
                   style={{
                     fontFamily: "var(--font-playfair)",
                   }}
@@ -72,7 +95,7 @@ export default function Hero() {
                   scenes as they are on the screen.
                 </h2>
               </div>
-            </motion.div>
+            </div>
             <div className="flex gap-4 mt-8">
               {/* 2 buttons side by side */}
 
@@ -93,7 +116,7 @@ export default function Hero() {
                 </a>
               </motion.button>
             </div>
-          </motion.div>
+          </div>
 
           {/* RIGHT SIDE */}
           <motion.div
