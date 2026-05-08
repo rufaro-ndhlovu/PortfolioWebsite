@@ -23,6 +23,8 @@ export default function Hero() {
         type: "chars",
       });
 
+      if (!container.current) return;
+
       gsap.from(split.chars, {
         x: 100,
         autoAlpha: 0,

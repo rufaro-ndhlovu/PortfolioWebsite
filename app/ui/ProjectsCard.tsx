@@ -2,6 +2,12 @@ import React, { useRef, useEffect, useState } from "react";
 import Button from "./Button";
 import Image from "next/image";
 
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 import { motion, useInView } from "framer-motion";
 
 type props = {
