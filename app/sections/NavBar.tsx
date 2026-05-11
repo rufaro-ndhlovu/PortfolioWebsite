@@ -48,51 +48,53 @@ export default function NavBar() {
   };
 
   return (
-    <nav
-      ref={navRef}
-      className="fixed top-4 px-4 left-1/2 -translate-x-1/2 z-[1000] w-[95%] md:w-[90%] lg:w-[80%] bg-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.37) rounded-full"
-    >
-      <div className="flex flex-row justify-between items-center">
-        <Logo />
-        <div className="md:flex gap-8 hidden">
-          <button
-            onClick={() => scrollToSection("about")}
-            className="py-2 px-4 font-bold text-[var(--pink-main)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
-          >
-            About
-          </button>
-          <button
-            onClick={() => scrollToSection("skills")}
-            className="py-2 px-4 font-bold text-[var(--pink-main)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
-          >
-            Skills
-          </button>
-          <button
-            onClick={() => scrollToSection("projects")}
-            className="py-2 px-4 font-bold text-[var(--pink-main)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
-          >
-            Projects
-          </button>
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="py-2 px-4 font-bold text-[var(--pink-main)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
-          >
-            Contact
-          </button>
-        </div>
-        <div className="hidden md:block">
-          <Button color="bg-card" onClick={() => scrollToSection("contact")}>
-            Lets Work Together
-          </Button>
-        </div>
+    <>
+      <nav
+        ref={navRef}
+        className="fixed top-4 px-4 left-1/2 -translate-x-1/2 z-[1000] w-[95%] md:w-[90%] lg:w-[80%] bg-white/5 backdrop-blur-2xl border border-white/10 rounded-full"
+      >
+        <div className="flex flex-row justify-between items-center">
+          <Logo />
+          <div className="md:flex gap-8 hidden">
+            <button
+              onClick={() => scrollToSection("about")}
+              className="py-2 px-4 font-bold text-[var(--pink-main)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection("skills")}
+              className="py-2 px-4 font-bold text-[var(--pink-main)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
+            >
+              Skills
+            </button>
+            <button
+              onClick={() => scrollToSection("projects")}
+              className="py-2 px-4 font-bold text-[var(--pink-main)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
+            >
+              Projects
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="py-2 px-4 font-bold text-[var(--pink-main)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
+            >
+              Contact
+            </button>
+          </div>
+          <div className="hidden md:block">
+            <Button color="bg-card" onClick={() => scrollToSection("contact")}>
+              Lets Work Together
+            </Button>
+          </div>
 
-        <button
-          className="md:hidden border border-[var(--pink-glow)] bg-[var(--pink-main)] text-[var(--text-dark)] text-2xl rounded-lg p-1 hover:cursor-pointer"
-          onClick={handleShowMenu}
-        >
-          <TiThMenuOutline />
-        </button>
-      </div>
+          <button
+            className="md:hidden border border-[var(--pink-glow)] bg-[var(--pink-main)] text-[var(--text-dark)] text-2xl rounded-lg p-1 hover:cursor-pointer"
+            onClick={handleShowMenu}
+          >
+            <TiThMenuOutline />
+          </button>
+        </div>
+      </nav>
 
       {showMenu && (
         <NavBarMob
@@ -100,6 +102,6 @@ export default function NavBar() {
           scrollToSection={scrollToSection}
         />
       )}
-    </nav>
+    </>
   );
 }

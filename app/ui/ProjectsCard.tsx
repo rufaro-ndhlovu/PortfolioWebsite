@@ -36,30 +36,23 @@ export default function ProjectsCard({
   });
 
   return (
-    <div className="p-4  shadow-md border border-[var(--pink-glow)] rounded-4xl gap-8 grid grid-cols-1 lg:grid-cols-5 min-h-[350px] bg-white/2 backdrop-blur-xl border-white/10">
+    <div
+      ref={ref}
+      className="px-4 pt-20 pb-4 shadow-md border border-[var(--pink-glow)] rounded-4xl gap-8 flex flex-col min-h-[500px] bg-white/2 backdrop-blur-xl border-white/10"
+    >
       {/* Image section with animation on scroll */}
-      <motion.div
-        className="relative flex justify-center items-center md:col-span-3"
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div
-          ref={ref}
-          className="relative overflow-hidden rounded-lg aspect-video w-full "
-        >
-          {/* Use Next.js Image component for optimized image loading */}
-          <Image
-            src={image}
-            alt={`${title} screenshot`}
-            fill
-            className="object-cover rounded-3xl transition-transform duration-500 hover:scale-105"
-          />
-        </div>
-      </motion.div>
+      <div className="relative overflow-hidden rounded-3xl w-full h-full flex-shrink-0 self-stretch flex items-center justify-center">
+        {/* Use Next.js Image component for optimized image loading */}
+        <Image
+          src={image}
+          alt={`${title} screenshot`}
+          width={900}
+          height={500}
+          className="object-cover rounded-3xl transition-transform duration-500 hover:scale-105"
+        />
+      </div>
 
-      <div className="flex flex-col justify-evenly gap-2 lg:gap-0 md:col-span-2">
+      <div className="flex flex-col justify-evenly gap-2 flex-1">
         {/* Project title and description */}
         <h3 className=" text-[var(--text-dark)] font-bold sm:text-md lg:text-xl text-[var(--font-playfair)]">
           {title}

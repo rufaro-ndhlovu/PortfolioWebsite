@@ -84,7 +84,7 @@ export default function Hero() {
                 </span>
 
                 <span
-                  className=" heroHead text-[var(--text-primary)]"
+                  className="heroHead text-[var(--text-primary)]"
                   style={{
                     fontFamily: "var(--font-playfair)",
                   }}
@@ -94,7 +94,7 @@ export default function Hero() {
               </h1>
 
               <div className="mt-5 space-y-4 max-w-lg">
-                <p className="text-[var(--pink-main)] uppercase tracking-[0.25em] text-sm font-medium">
+                <p className="heroHead text-[var(--pink-main)] uppercase tracking-[0.25em] text-sm font-medium">
                   Front-End Developer
                 </p>
 
