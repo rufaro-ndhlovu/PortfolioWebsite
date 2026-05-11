@@ -40,7 +40,9 @@ export default function Projects() {
       className="projectsContainer pt-5 pb-20 bg-[var(--bg-section)] shadow-md overflow-x-clip"
     >
       <div ref={container}>
-        <Label>PROJECTS</Label>
+        <div className="pl-4">
+          <Label>PROJECTS</Label>
+        </div>
 
         <div ref={projectsWrap} id="projectsWrap" className="flex mt-6 ">
           {projects.map((project) => (
