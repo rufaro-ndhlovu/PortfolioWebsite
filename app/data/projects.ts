@@ -41,6 +41,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Tailwind CSS",
       "Framer Motion",
+      "GSAP",
     ],
     stackLabel: "Frontend",
     github: "https://github.com/rufaro-ndhlovu/PortfolioWebsite",
