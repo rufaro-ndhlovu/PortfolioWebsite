@@ -55,7 +55,7 @@ export default function NavBar() {
       >
         <div className="flex flex-row justify-between items-center">
           <Logo />
-          <div className="md:flex gap-8 hidden">
+          <div className="lg:flex gap-8 hidden">
             <button
               onClick={() => scrollToSection("about")}
               className="py-2 px-4 font-bold text-[var(--pink-main)] cursor-pointer bg-transparent border-none rounded-full hover:bg-[var(--pink-soft)] hover:text-[var(--text-dark)]"
@@ -81,14 +81,14 @@ export default function NavBar() {
               Contact
             </button>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button color="bg-card" onClick={() => scrollToSection("contact")}>
               Lets Work Together
             </Button>
           </div>
 
           <button
-            className="md:hidden border border-[var(--pink-glow)] bg-[var(--pink-main)] text-[var(--text-dark)] text-2xl rounded-lg p-1 hover:cursor-pointer"
+            className="lg:hidden border border-[var(--pink-glow)] bg-[var(--pink-main)] text-[var(--text-dark)] text-2xl rounded-lg p-1 hover:cursor-pointer"
             onClick={handleShowMenu}
           >
             <TiThMenuOutline />
