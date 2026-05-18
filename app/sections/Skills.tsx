@@ -16,7 +16,7 @@ export default function Skills() {
         viewport={{ once: true }}
       >
         <Label>TECHNICAL SKILLS</Label>
-        <div className="mt-8 space-y-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch ">
+        <div className="mt-8 space-y-10 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch ">
           {skillCategories.map((category) => (
             <div
               key={category.title}
@@ -28,7 +28,12 @@ export default function Skills() {
 
               <div className="flex flex-row flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <SkillsCard key={skill.name} name={skill.name} />
+                  <SkillsCard
+                    key={skill.name}
+                    name={skill.name}
+                    usedIn={skill.usedIn}
+                    snippet={skill.snippet}
+                  />
                 ))}
               </div>
             </div>
