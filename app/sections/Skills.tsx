@@ -28,12 +28,23 @@ export default function Skills() {
 
               <div className="flex flex-row flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <SkillsCard
+                  <motion.div
                     key={skill.name}
-                    name={skill.name}
-                    usedIn={skill.usedIn}
-                    snippet={skill.snippet}
-                  />
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.6 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 1 * Math.random(),
+                    }}
+                  >
+                    <SkillsCard
+                      key={skill.name}
+                      name={skill.name}
+                      usedIn={skill.usedIn}
+                      snippet={skill.snippet}
+                    />
+                  </motion.div>
                 ))}
               </div>
             </div>
