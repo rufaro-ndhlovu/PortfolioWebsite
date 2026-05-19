@@ -45,11 +45,7 @@ export default function Projects() {
           <Label>PROJECTS</Label>
         </div>
 
-        <div
-          ref={projectsWrap}
-          id="projectsWrap"
-          className="flex mt-6 overflow-hidden"
-        >
+        <div ref={projectsWrap} id="projectsWrap" className="flex mt-6">
           {projects.map((project) => (
             <div key={project.id} className="panel min-w-[100vw] h-[90vh] p-4">
               <ProjectsCard
