@@ -27,7 +27,8 @@ export default function Projects() {
           pin: true,
           scrub: 1,
           snap: 1 / (sections.length - 1),
-          end: () => "+=" + projectsWrap.current!.scrollWidth,
+          end: () =>
+            `+=${projectsWrap.current!.scrollWidth - window.innerWidth}`,
         },
       });
     },
@@ -37,14 +38,18 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="projectsContainer pt-5 pb-20 bg-[var(--bg-section)] shadow-md overflow-x-clip"
+      className="projectsContainer pt-5 pb-20 bg-[var(--bg-section)] shadow-md overflow-hidden"
     >
       <div ref={container}>
         <div className="pl-4">
           <Label>PROJECTS</Label>
         </div>
 
-        <div ref={projectsWrap} id="projectsWrap" className="flex mt-6 ">
+        <div
+          ref={projectsWrap}
+          id="projectsWrap"
+          className="flex mt-6 overflow-hidden"
+        >
           {projects.map((project) => (
             <div key={project.id} className="panel min-w-[100vw] h-[90vh] p-4">
               <ProjectsCard

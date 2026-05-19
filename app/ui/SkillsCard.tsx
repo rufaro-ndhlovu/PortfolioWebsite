@@ -35,7 +35,6 @@ export default function SkillsCard({ name, usedIn, snippet }: props) {
           exit={{ opacity: 0, y: 6, scale: 0.95 }}
           transition={{ duration: 0.18, ease: "easeOut" }}
           className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 z-50 pointer-events-none"
-          style={{ minWidth: "180px" }}
         >
           <div
             className="rounded-2xl px-4 py-3 backdrop-blur-xl border border-white/10"
