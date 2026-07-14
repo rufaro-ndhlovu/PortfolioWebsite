@@ -116,7 +116,7 @@ export default function Hero() {
                 View My Work
               </Button>
 
-              <motion.button
+              {/*<motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -127,7 +127,11 @@ export default function Hero() {
                 >
                   Download CV
                 </a>
-              </motion.button>
+              </motion.button>*/}
+
+              <Button color="bg-card" onClick={() => {}}>
+                Start a Project
+              </Button>
             </div>
           </div>
 
